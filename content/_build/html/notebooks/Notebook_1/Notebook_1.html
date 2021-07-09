@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Notebook 1: Flow Measurement using the Salt Dilution Method &#8212; Engineering Hydrology</title>
     
-  <link rel="stylesheet" href="../../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -19,14 +20,10 @@
 
     
       
-  <link rel="stylesheet"
-    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -34,17 +31,20 @@
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.d3f166471bb80abb5163.js">
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -52,20 +52,18 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Notebook 2: Rating Curve Development" href="../Notebook_2/Notebook_2.html" />
     <link rel="prev" title="Example: Data Import and Review" href="../Introduction/Data_Import_and_Review.html" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
-
-
-
+    
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
     
 
     <div class="container-xl">
@@ -74,32 +72,32 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="../../index.html">
-  
-  <img src="../../_static/logo.png" class="logo" alt="logo">
-  
-  
-  <h1 class="site-logo" id="site-title">Engineering Hydrology</h1>
-  
-</a>
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Engineering Hydrology</h1>
+      
+    </a>
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form>
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="nav sidenav_l1">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../intro.html">
    Foreword
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Introduction
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../Introduction/Example_Notebook.html">
    Example: Clausius-Clapeyron Equation
@@ -111,60 +109,60 @@
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Flow Measurement
  </span>
 </p>
-<ul class="current nav sidenav_l1">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Notebook 1: Flow Measurement using the Salt Dilution Method
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Rating Curve Development
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../Notebook_2/Notebook_2.html">
    Notebook 2: Rating Curve Development
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Extreme Values, Uncertainty, and Risk
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../Notebook_3/Notebook_3.html">
    Notebook 3: Extreme Values, Uncertainty, and Risk
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Regional Regression
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../Notebook_4/Notebook_4.html">
    Notebook 4: Characterization of Long-Term Runoff
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Rainfall-Runoff Model
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../Notebook_5/Notebook_5.html">
    Notebook 5: Rational Method and Travel Times
@@ -172,6 +170,7 @@
  </li>
 </ul>
 
+    </div>
 </nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
@@ -226,23 +225,23 @@
         aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
-            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+            href="https://github.com/hydroinfotheory/Engineering_Hydrology_Notebooks"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fnotebooks/Notebook_1/Notebook_1.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/hydroinfotheory/Engineering_Hydrology_Notebooks/issues/new?title=Issue%20on%20page%20%2Fnotebooks/Notebook_1/Notebook_1.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
     </div>
 </div>
 
-
             <!-- Full screen (wrap in <a> to have style consistency -->
-            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                    title="Fullscreen mode"><i
-                        class="fas fa-expand"></i></button></a>
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
 
@@ -251,7 +250,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/main?urlpath=tree/docs/notebooks/Notebook_1/Notebook_1.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/hydroinfotheory/Engineering_Hydrology_Notebooks/main?urlpath=tree/content/notebooks/Notebook_1/Notebook_1.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -268,12 +267,11 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i>
-            Contents
-        </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#given-information">
    Given Information:
@@ -339,8 +337,7 @@
  </li>
 </ul>
 
-        </nav>
-        
+            </nav>
         </div>
     </div>
 </div>
@@ -907,7 +904,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fb431a30fd0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f9012349d00&gt;
 </pre></div>
 </div>
 <img alt="../../_images/Notebook_1_13_1.png" src="../../_images/Notebook_1_13_1.png" />
@@ -938,7 +935,7 @@
 <div class="output text_html">
 <div class="bk-root">
     <a href="https://bokeh.org" target="_blank" class="bk-logo bk-logo-small bk-logo-notebook"></a>
-    <span id="1002">Loading BokehJS ...</span>
+    <span id="1001">Loading BokehJS ...</span>
 </div></div><script type="application/javascript">
 (function(root) {
   function now() {
@@ -1007,7 +1004,7 @@
     var output = handle.output;
 
     // limit handleAddOutput to display_data with EXEC_MIME_TYPE content only
-    if ((output.output_type != "display_data") || (!Object.prototype.hasOwnProperty.call(output.data, EXEC_MIME_TYPE))) {
+    if ((output.output_type != "display_data") || (!output.data.hasOwnProperty(EXEC_MIME_TYPE))) {
       return
     }
 
@@ -1099,7 +1096,7 @@
      "</div>"}};
 
   function display_loaded() {
-    var el = document.getElementById("1002");
+    var el = document.getElementById("1001");
     if (el != null) {
       el.textContent = "BokehJS is loading...";
     }
@@ -1149,15 +1146,15 @@
       }
     }
 
-    function on_error(url) {
+    function on_error() {
       console.error("failed to load " + url);
     }
 
-    for (let i = 0; i < css_urls.length; i++) {
-      const url = css_urls[i];
+    for (var i = 0; i < css_urls.length; i++) {
+      var url = css_urls[i];
       const element = document.createElement("link");
       element.onload = on_load;
-      element.onerror = on_error.bind(null, url);
+      element.onerror = on_error;
       element.rel = "stylesheet";
       element.type = "text/css";
       element.href = url;
@@ -1165,13 +1162,13 @@
       document.body.appendChild(element);
     }
 
-    const hashes = {"https://cdn.bokeh.org/bokeh/release/bokeh-2.3.1.min.js": "YF85VygJKMVnHE+lLv2AM93Vbstr0yo2TbIu5v8se5Rq3UQAUmcuh4aaJwNlpKwa", "https://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.3.1.min.js": "KKuas3gevv3PvrlkyCMzffFeaMq5we/a2QsP5AUoS3mJ0jmaCL7jirFJN3GoE/lM", "https://cdn.bokeh.org/bokeh/release/bokeh-tables-2.3.1.min.js": "MK/uFc3YT18pkvvXRl66tTHjP0/dxoSH2e/eiNMFIguKlun2+WVqaPTWmUy/zvh4"};
+    const hashes = {"https://cdn.bokeh.org/bokeh/release/bokeh-2.2.3.min.js": "T2yuo9Oe71Cz/I4X9Ac5+gpEa5a8PpJCDlqKYO0CfAuEszu1JrXLl8YugMqYe3sM", "https://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.2.3.min.js": "98GDGJ0kOMCUMUePhksaQ/GYgB3+NH9h996V88sh3aOiUNX3N+fLXAtry6xctSZ6", "https://cdn.bokeh.org/bokeh/release/bokeh-tables-2.2.3.min.js": "89bArO+nlbP3sgakeHjCo1JYxYR5wufVgA3IbUvDY+K7w4zyxJqssu7wVnfeKCq8"};
 
-    for (let i = 0; i < js_urls.length; i++) {
-      const url = js_urls[i];
-      const element = document.createElement('script');
+    for (var i = 0; i < js_urls.length; i++) {
+      var url = js_urls[i];
+      var element = document.createElement('script');
       element.onload = on_load;
-      element.onerror = on_error.bind(null, url);
+      element.onerror = on_error;
       element.async = false;
       element.src = url;
       if (url in hashes) {
@@ -1190,7 +1187,7 @@
   }
 
   
-  var js_urls = ["https://cdn.bokeh.org/bokeh/release/bokeh-2.3.1.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.3.1.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-tables-2.3.1.min.js"];
+  var js_urls = ["https://cdn.bokeh.org/bokeh/release/bokeh-2.2.3.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.2.3.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-tables-2.2.3.min.js"];
   var css_urls = [];
   
 
@@ -1219,7 +1216,7 @@
       console.log("Bokeh: BokehJS failed to load within specified timeout.");
       root._bokeh_failed_load = true;
     } else if (force !== true) {
-      var cell = $(document.getElementById("1002")).parents('.cell').data().cell;
+      var cell = $(document.getElementById("1001")).parents('.cell').data().cell;
       cell.output_area.append_execute_result(NB_LOAD_WARNING)
     }
 
@@ -1240,12 +1237,12 @@
 
 
 
-<div class="bk-root" id="e4d2458d-3ab6-4f27-96cb-ac5ae909dc1f" data-root-id="1003"></div>
+<div class="bk-root" id="ad6c3a81-ad0a-4569-81b2-b183971d7c1a" data-root-id="1002"></div>
 </div><script type="application/javascript">(function(root) {
   function embed_document(root) {
     
-  var docs_json = {"35b5d851-d18a-4c23-8bbc-616a5a8908b9":{"defs":[],"roots":{"references":[{"attributes":{"below":[{"id":"1012"}],"center":[{"id":"1015"},{"id":"1019"}],"height":400,"left":[{"id":"1016"}],"renderers":[{"id":"1037"},{"id":"1042"}],"title":{"id":"1044"},"toolbar":{"id":"1027"},"width":800,"x_range":{"id":"1004"},"x_scale":{"id":"1008"},"y_range":{"id":"1006"},"y_scale":{"id":"1010"}},"id":"1003","subtype":"Figure","type":"Plot"},{"attributes":{},"id":"1013","type":"BasicTicker"},{"attributes":{"axis":{"id":"1012"},"ticker":null},"id":"1015","type":"Grid"},{"attributes":{"formatter":{"id":"1046"},"major_label_policy":{"id":"1048"},"ticker":{"id":"1017"}},"id":"1016","type":"LinearAxis"},{"attributes":{},"id":"1025","type":"HelpTool"},{"attributes":{"axis":{"id":"1016"},"dimension":1,"ticker":null},"id":"1019","type":"Grid"},{"attributes":{},"id":"1046","type":"BasicTickFormatter"},{"attributes":{},"id":"1017","type":"BasicTicker"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"red"},"line_alpha":{"value":0.1},"line_color":{"value":"red"},"size":{"value":5},"x":{"field":"x"},"y":{"field":"y"}},"id":"1036","type":"Circle"},{"attributes":{},"id":"1021","type":"WheelZoomTool"},{"attributes":{"active_multi":null,"tools":[{"id":"1020"},{"id":"1021"},{"id":"1022"},{"id":"1023"},{"id":"1024"},{"id":"1025"}]},"id":"1027","type":"Toolbar"},{"attributes":{},"id":"1054","type":"Selection"},{"attributes":{},"id":"1048","type":"AllLabels"},{"attributes":{},"id":"1020","type":"PanTool"},{"attributes":{},"id":"1055","type":"UnionRenderers"},{"attributes":{},"id":"1049","type":"BasicTickFormatter"},{"attributes":{"overlay":{"id":"1026"}},"id":"1022","type":"BoxZoomTool"},{"attributes":{},"id":"1023","type":"SaveTool"},{"attributes":{},"id":"1024","type":"ResetTool"},{"attributes":{},"id":"1051","type":"AllLabels"},{"attributes":{"source":{"id":"1034"}},"id":"1038","type":"CDSView"},{"attributes":{},"id":"1004","type":"DataRange1d"},{"attributes":{"data_source":{"id":"1039"},"glyph":{"id":"1040"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"1041"},"view":{"id":"1043"}},"id":"1042","type":"GlyphRenderer"},{"attributes":{"data_source":{"id":"1034"},"glyph":{"id":"1035"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"1036"},"view":{"id":"1038"}},"id":"1037","type":"GlyphRenderer"},{"attributes":{},"id":"1010","type":"LinearScale"},{"attributes":{"fill_alpha":{"value":0.5},"fill_color":{"value":"red"},"line_alpha":{"value":0.5},"line_color":{"value":"red"},"size":{"value":5},"x":{"field":"x"},"y":{"field":"y"}},"id":"1035","type":"Circle"},{"attributes":{"source":{"id":"1039"}},"id":"1043","type":"CDSView"},{"attributes":{},"id":"1006","type":"DataRange1d"},{"attributes":{"line_color":"#1f77b4","x":{"field":"x"},"y":{"field":"y"}},"id":"1040","type":"Line"},{"attributes":{"formatter":{"id":"1049"},"major_label_policy":{"id":"1051"},"ticker":{"id":"1013"}},"id":"1012","type":"LinearAxis"},{"attributes":{"line_alpha":0.1,"line_color":"#1f77b4","x":{"field":"x"},"y":{"field":"y"}},"id":"1041","type":"Line"},{"attributes":{"bottom_units":"screen","fill_alpha":0.5,"fill_color":"lightgrey","left_units":"screen","level":"overlay","line_alpha":1.0,"line_color":"black","line_dash":[4,4],"line_width":2,"right_units":"screen","syncable":false,"top_units":"screen"},"id":"1026","type":"BoxAnnotation"},{"attributes":{"data":{"x":{"__ndarray__":"AAAAAADwckAAAAAAAHB1QAAAAAAAwHdAAAAAAACgekAAAAAAAAB9QAAAAAAAkH9AAAAAAAAQgUA=","dtype":"float64","order":"little","shape":[7]},"y":{"__ndarray__":"AAAAAAAAAADRRG9K1Ss2QLhEQqpmH0ZA3ZOddkSOUEB86tEOswZWQJ/1cl4JeVtAk860x6hyYEA=","dtype":"float64","order":"little","shape":[7]}},"selected":{"id":"1052"},"selection_policy":{"id":"1053"}},"id":"1034","type":"ColumnDataSource"},{"attributes":{},"id":"1044","type":"Title"},{"attributes":{},"id":"1008","type":"LinearScale"},{"attributes":{},"id":"1052","type":"Selection"},{"attributes":{"data":{"x":{"__ndarray__":"AAAAAADwckAXXXTRRRdzQC+66KKLPnNARhdddNFlc0BddNFFF41zQHTRRRddtHNAjC666KLbc0Cjiy666AJ0QLrooosuKnRA0UUXXXRRdEDpoosuunh0QAAAAAAAoHRAF1100UXHdEAvuuiii+50QEYXXXTRFXVAXXTRRRc9dUB00UUXXWR1QIwuuuiii3VAo4suuuiydUC66KKLLtp1QNJFF110AXZA6aKLLroodkAAAAAAAFB2QBdddNFFd3ZALrrooouedkBGF1100cV2QF100UUX7XZAdNFFF10Ud0CMLrroojt3QKOLLrroYndAuuiiiy6Kd0DSRRdddLF3QOmiiy662HdAAAAAAAAAeEAXXXTRRSd4QC666KKLTnhARhdddNF1eEBddNFFF514QHTRRRddxHhAjC666KLreECjiy666BJ5QLrooosuOnlA0kUXXXRheUDpoosuuoh5QAAAAAAAsHlAF1100UXXeUAuuuiii/55QEYXXXTRJXpAXXTRRRdNekB00UUXXXR6QIwuuuiim3pAo4suuujCekC66KKLLup6QNJFF110EXtA6aKLLro4e0AAAAAAAGB7QBhddNFFh3tALrrooouue0BGF1100dV7QF100UUX/XtAdNFFF10kfECMLrrookt8QKOLLrrocnxAuuiiiy6afEDSRRdddMF8QOmiiy666HxAAAAAAAAQfUAYXXTRRTd9QC666KKLXn1ARhdddNGFfUBddNFFF619QHTRRRdd1H1AjC666KL7fUCjiy666CJ+QLrooosuSn5A0kUXXXRxfkDpoosuuph+QAAAAAAAwH5AGF100UXnfkAuuuiiiw5/QEYXXXTRNX9AXXTRRRddf0B00UUXXYR/QIwuuuiiq39Ao4suuujSf0C66KKLLvp/QOmiiy66EIBAdNFFF10kgEAAAAAAADiAQIwuuuiiS4BAF1100UVfgECjiy666HKAQC666KKLhoBAuuiiiy6agEBGF1100a2AQNJFF110wYBAXXTRRRfVgEDpoosuuuiAQHTRRRdd/IBAAAAAAAAQgUA=","dtype":"float64","order":"little","shape":[100]},"y":[0.7855584341419899,2.1106634889706015,3.435768543799213,4.760873598627825,6.085978653456408,7.41108370828502,8.736188763113631,10.061293817942214,11.386398872770826,12.71150392759941,14.03660898242805,15.361714037256633,16.686819092085244,18.011924146913856,19.337029201742467,20.66213425657105,21.987239311399662,23.312344366228274,24.637449421056886,25.96255447588547,27.28765953071411,28.612764585542692,29.937869640371275,31.262974695199887,32.58807975002847,33.91318480485711,35.23828985968569,36.563394914514305,37.88849996934292,39.21360502417153,40.53871007900011,41.86381513382875,43.188920188657335,44.51402524348592,45.83913029831453,47.16423535314311,48.48934040797175,49.814445462800336,51.13955051762895,52.46465557245756,53.78976062728617,55.114865682114754,56.439970736943394,57.76507579177198,59.09018084660059,60.41528590142917,61.740390956257755,63.065496011086395,64.39060106591498,65.71570612074359,67.0408111755722,68.36591623040081,69.6910212852294,71.01612634005804,72.34123139488662,73.66633644971523,74.99144150454384,76.31654655937243,77.64165161420104,78.96675666902965,80.29186172385823,81.61696677868684,82.94207183351546,84.26717688834404,85.59228194317268,86.91738699800126,88.24249205282987,89.56759710765849,90.89270216248707,92.21780721731568,93.54291227214426,94.86801732697288,96.19312238180149,97.5182274366301,98.84333249145871,100.16843754628732,101.49354260111593,102.81864765594449,104.14375271077316,105.46885776560171,106.79396282043032,108.11906787525893,109.44417293008755,110.76927798491616,112.09438303974477,113.41948809457332,114.744593149402,116.06969820423055,117.39480325905916,118.71990831388777,120.04501336871633,121.370118423545,122.69522347837355,124.02032853320216,125.34543358803077,126.67053864285944,127.995643697688,129.3207487525166,130.64585380734516,131.97095886217377]},"selected":{"id":"1054"},"selection_policy":{"id":"1055"}},"id":"1039","type":"ColumnDataSource"},{"attributes":{},"id":"1053","type":"UnionRenderers"}],"root_ids":["1003"]},"title":"Bokeh Application","version":"2.3.1"}};
-  var render_items = [{"docid":"35b5d851-d18a-4c23-8bbc-616a5a8908b9","root_ids":["1003"],"roots":{"1003":"e4d2458d-3ab6-4f27-96cb-ac5ae909dc1f"}}];
+  var docs_json = {"42247472-054d-4ca2-ae10-3ca1862cd76c":{"roots":{"references":[{"attributes":{"below":[{"id":"1011"}],"center":[{"id":"1014"},{"id":"1018"}],"left":[{"id":"1015"}],"plot_height":400,"plot_width":800,"renderers":[{"id":"1036"},{"id":"1041"}],"title":{"id":"1044"},"toolbar":{"id":"1026"},"x_range":{"id":"1003"},"x_scale":{"id":"1007"},"y_range":{"id":"1005"},"y_scale":{"id":"1009"}},"id":"1002","subtype":"Figure","type":"Plot"},{"attributes":{},"id":"1003","type":"DataRange1d"},{"attributes":{"formatter":{"id":"1045"},"ticker":{"id":"1016"}},"id":"1015","type":"LinearAxis"},{"attributes":{},"id":"1045","type":"BasicTickFormatter"},{"attributes":{"axis":{"id":"1015"},"dimension":1,"ticker":null},"id":"1018","type":"Grid"},{"attributes":{},"id":"1024","type":"HelpTool"},{"attributes":{},"id":"1016","type":"BasicTicker"},{"attributes":{},"id":"1020","type":"WheelZoomTool"},{"attributes":{"active_drag":"auto","active_inspect":"auto","active_multi":null,"active_scroll":"auto","active_tap":"auto","tools":[{"id":"1019"},{"id":"1020"},{"id":"1021"},{"id":"1022"},{"id":"1023"},{"id":"1024"}]},"id":"1026","type":"Toolbar"},{"attributes":{},"id":"1047","type":"BasicTickFormatter"},{"attributes":{},"id":"1019","type":"PanTool"},{"attributes":{"overlay":{"id":"1025"}},"id":"1021","type":"BoxZoomTool"},{"attributes":{},"id":"1005","type":"DataRange1d"},{"attributes":{},"id":"1022","type":"SaveTool"},{"attributes":{},"id":"1023","type":"ResetTool"},{"attributes":{"source":{"id":"1033"}},"id":"1037","type":"CDSView"},{"attributes":{"data_source":{"id":"1033"},"glyph":{"id":"1034"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"1035"},"selection_glyph":null,"view":{"id":"1037"}},"id":"1036","type":"GlyphRenderer"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"red"},"line_alpha":{"value":0.1},"line_color":{"value":"red"},"size":{"units":"screen","value":5},"x":{"field":"x"},"y":{"field":"y"}},"id":"1035","type":"Circle"},{"attributes":{"line_color":"#1f77b4","x":{"field":"x"},"y":{"field":"y"}},"id":"1039","type":"Line"},{"attributes":{},"id":"1049","type":"Selection"},{"attributes":{"data":{"x":{"__ndarray__":"AAAAAADwckAXXXTRRRdzQC+66KKLPnNARhdddNFlc0BddNFFF41zQHTRRRddtHNAjC666KLbc0Cjiy666AJ0QLrooosuKnRA0UUXXXRRdEDpoosuunh0QAAAAAAAoHRAF1100UXHdEAvuuiii+50QEYXXXTRFXVAXXTRRRc9dUB00UUXXWR1QIwuuuiii3VAo4suuuiydUC66KKLLtp1QNJFF110AXZA6aKLLroodkAAAAAAAFB2QBdddNFFd3ZALrrooouedkBGF1100cV2QF100UUX7XZAdNFFF10Ud0CMLrroojt3QKOLLrroYndAuuiiiy6Kd0DSRRdddLF3QOmiiy662HdAAAAAAAAAeEAXXXTRRSd4QC666KKLTnhARhdddNF1eEBddNFFF514QHTRRRddxHhAjC666KLreECjiy666BJ5QLrooosuOnlA0kUXXXRheUDpoosuuoh5QAAAAAAAsHlAF1100UXXeUAuuuiii/55QEYXXXTRJXpAXXTRRRdNekB00UUXXXR6QIwuuuiim3pAo4suuujCekC66KKLLup6QNJFF110EXtA6aKLLro4e0AAAAAAAGB7QBhddNFFh3tALrrooouue0BGF1100dV7QF100UUX/XtAdNFFF10kfECMLrrookt8QKOLLrrocnxAuuiiiy6afEDSRRdddMF8QOmiiy666HxAAAAAAAAQfUAYXXTRRTd9QC666KKLXn1ARhdddNGFfUBddNFFF619QHTRRRdd1H1AjC666KL7fUCjiy666CJ+QLrooosuSn5A0kUXXXRxfkDpoosuuph+QAAAAAAAwH5AGF100UXnfkAuuuiiiw5/QEYXXXTRNX9AXXTRRRddf0B00UUXXYR/QIwuuuiiq39Ao4suuujSf0C66KKLLvp/QOmiiy66EIBAdNFFF10kgEAAAAAAADiAQIwuuuiiS4BAF1100UVfgECjiy666HKAQC666KKLhoBAuuiiiy6agEBGF1100a2AQNJFF110wYBAXXTRRRfVgEDpoosuuuiAQHTRRRdd/IBAAAAAAAAQgUA=","dtype":"float64","order":"little","shape":[100]},"y":[0.7855584341419899,2.1106634889706015,3.435768543799213,4.760873598627825,6.085978653456408,7.41108370828502,8.736188763113631,10.061293817942214,11.386398872770826,12.71150392759941,14.03660898242805,15.361714037256633,16.686819092085244,18.011924146913856,19.337029201742467,20.66213425657105,21.987239311399662,23.312344366228274,24.637449421056886,25.96255447588547,27.28765953071411,28.612764585542692,29.937869640371275,31.262974695199887,32.58807975002847,33.91318480485711,35.23828985968569,36.563394914514305,37.88849996934292,39.21360502417153,40.53871007900011,41.86381513382875,43.188920188657335,44.51402524348592,45.83913029831453,47.16423535314311,48.48934040797175,49.814445462800336,51.13955051762895,52.46465557245756,53.78976062728617,55.114865682114754,56.439970736943394,57.76507579177198,59.09018084660059,60.41528590142917,61.740390956257755,63.065496011086395,64.39060106591498,65.71570612074359,67.0408111755722,68.36591623040081,69.6910212852294,71.01612634005804,72.34123139488662,73.66633644971523,74.99144150454384,76.31654655937243,77.64165161420104,78.96675666902965,80.29186172385823,81.61696677868684,82.94207183351546,84.26717688834404,85.59228194317268,86.91738699800126,88.24249205282987,89.56759710765849,90.89270216248707,92.21780721731568,93.54291227214426,94.86801732697288,96.19312238180149,97.5182274366301,98.84333249145871,100.16843754628732,101.49354260111593,102.81864765594449,104.14375271077316,105.46885776560171,106.79396282043032,108.11906787525893,109.44417293008755,110.76927798491616,112.09438303974477,113.41948809457332,114.744593149402,116.06969820423055,117.39480325905916,118.71990831388777,120.04501336871633,121.370118423545,122.69522347837355,124.02032853320216,125.34543358803077,126.67053864285944,127.995643697688,129.3207487525166,130.64585380734516,131.97095886217377]},"selected":{"id":"1051"},"selection_policy":{"id":"1052"}},"id":"1038","type":"ColumnDataSource"},{"attributes":{"line_alpha":0.1,"line_color":"#1f77b4","x":{"field":"x"},"y":{"field":"y"}},"id":"1040","type":"Line"},{"attributes":{},"id":"1050","type":"UnionRenderers"},{"attributes":{"source":{"id":"1038"}},"id":"1042","type":"CDSView"},{"attributes":{"bottom_units":"screen","fill_alpha":0.5,"fill_color":"lightgrey","left_units":"screen","level":"overlay","line_alpha":1.0,"line_color":"black","line_dash":[4,4],"line_width":2,"right_units":"screen","top_units":"screen"},"id":"1025","type":"BoxAnnotation"},{"attributes":{"data":{"x":{"__ndarray__":"AAAAAADwckAAAAAAAHB1QAAAAAAAwHdAAAAAAACgekAAAAAAAAB9QAAAAAAAkH9AAAAAAAAQgUA=","dtype":"float64","order":"little","shape":[7]},"y":{"__ndarray__":"AAAAAAAAAADRRG9K1Ss2QLhEQqpmH0ZA3ZOddkSOUEB86tEOswZWQJ/1cl4JeVtAk860x6hyYEA=","dtype":"float64","order":"little","shape":[7]}},"selected":{"id":"1049"},"selection_policy":{"id":"1050"}},"id":"1033","type":"ColumnDataSource"},{"attributes":{},"id":"1009","type":"LinearScale"},{"attributes":{"text":""},"id":"1044","type":"Title"},{"attributes":{"fill_alpha":{"value":0.5},"fill_color":{"value":"red"},"line_alpha":{"value":0.5},"line_color":{"value":"red"},"size":{"units":"screen","value":5},"x":{"field":"x"},"y":{"field":"y"}},"id":"1034","type":"Circle"},{"attributes":{},"id":"1007","type":"LinearScale"},{"attributes":{},"id":"1051","type":"Selection"},{"attributes":{"data_source":{"id":"1038"},"glyph":{"id":"1039"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"1040"},"selection_glyph":null,"view":{"id":"1042"}},"id":"1041","type":"GlyphRenderer"},{"attributes":{"formatter":{"id":"1047"},"ticker":{"id":"1012"}},"id":"1011","type":"LinearAxis"},{"attributes":{},"id":"1012","type":"BasicTicker"},{"attributes":{},"id":"1052","type":"UnionRenderers"},{"attributes":{"axis":{"id":"1011"},"ticker":null},"id":"1014","type":"Grid"}],"root_ids":["1002"]},"title":"Bokeh Application","version":"2.2.3"}};
+  var render_items = [{"docid":"42247472-054d-4ca2-ae10-3ca1862cd76c","root_ids":["1002"],"roots":{"1002":"ad6c3a81-ad0a-4569-81b2-b183971d7c1a"}}];
   root.Bokeh.embed.embed_items_notebook(docs_json, render_items);
 
   }
@@ -1460,7 +1457,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fb430c86b80&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f900d313fd0&gt;
 </pre></div>
 </div>
 <img alt="../../_images/Notebook_1_23_1.png" src="../../_images/Notebook_1_23_1.png" />
@@ -1580,9 +1577,9 @@ Then discharge (Q) is calculated by: \)</span>\frac{m_{salt}}{A_{curve}} = \frac
     <div class="container">
       <p>
         
-          By Dan Kovacek<br/>
+          By Dan Kovacek and Steven Weijs<br/>
         
-            &copy; Copyright 2020.<br/>
+            &copy; Copyright 2021.<br/>
       </p>
     </div>
   </footer>
@@ -1591,11 +1588,9 @@ Then discharge (Q) is calculated by: \)</span>\frac{m_{salt}}{A_{curve}} = \frac
 
       </div>
     </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
-    
-  <script src="../../_static/js/index.d3f166471bb80abb5163.js"></script>
-
-
-    
+  
   </body>
 </html>

@@ -14,7 +14,7 @@ Then, update the github pages site. Use the gh-pages branch update tool:
 
 `ghp-import -n -p -f content/_build/html`
 
-[Visit the site](https://dankovacek.github.io/Engineering_Hydrology_Notebooks/) at Github sites
+[Visit the site](https://hydroinfotheory.github.io/Engineering_Hydrology_Notebooks/) at Github sites
 
-`https://dankovacek.github.io/Engineering_Hydrology_Notebooks/`
+`https://hydroinfotheory.github.io/Engineering_Hydrology_Notebooks/`
 

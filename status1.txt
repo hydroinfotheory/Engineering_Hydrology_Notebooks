@@ -1,0 +1,110 @@
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   README.md
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   content/_build/.doctrees/environment.pickle
+	modified:   content/_build/.doctrees/intro.doctree
+	modified:   content/_build/.doctrees/markdown.doctree
+	modified:   content/_build/.doctrees/notebooks/Introduction/Data_Import_and_Review.doctree
+	modified:   content/_build/.doctrees/notebooks/Introduction/Example_Notebook.doctree
+	modified:   content/_build/.doctrees/notebooks/Notebook_1/Notebook_1.doctree
+	modified:   content/_build/.doctrees/notebooks/Notebook_1/Notebook_2.doctree
+	modified:   content/_build/.doctrees/notebooks/Notebook_2/Notebook_2.doctree
+	modified:   content/_build/.doctrees/notebooks/Notebook_3/Notebook_3.doctree
+	modified:   content/_build/.doctrees/notebooks/Notebook_4/Notebook_4.doctree
+	modified:   content/_build/.doctrees/notebooks/Notebook_5/Notebook_5.doctree
+	modified:   content/_build/html/.buildinfo
+	modified:   content/_build/html/_images/Example_Notebook_15_1.png
+	modified:   content/_build/html/_images/Notebook_1_13_1.png
+	modified:   content/_build/html/_images/Notebook_1_20_1.png
+	modified:   content/_build/html/_images/Notebook_1_23_1.png
+	modified:   content/_build/html/_images/Notebook_2_11_11.png
+	modified:   content/_build/html/_images/Notebook_2_22_0.png
+	modified:   content/_build/html/_images/Notebook_2_30_0.png
+	modified:   content/_build/html/_images/Notebook_3_17_1.png
+	modified:   content/_build/html/_images/Notebook_3_20_1.png
+	modified:   content/_build/html/_images/Notebook_3_42_1.png
+	modified:   content/_build/html/_images/Notebook_3_46_0.png
+	modified:   content/_build/html/_images/Notebook_4_6_0.png
+	modified:   content/_build/html/_sources/notebooks/Notebook_2/Notebook_2.ipynb
+	modified:   content/_build/html/_static/__pycache__/__init__.cpython-38.pyc
+	modified:   content/_build/html/_static/basic.css
+	modified:   content/_build/html/_static/clipboard.min.js
+	modified:   content/_build/html/_static/copy-button.svg
+	modified:   content/_build/html/_static/copybutton.css
+	modified:   content/_build/html/_static/copybutton.js
+	modified:   content/_build/html/_static/copybutton_funcs.js
+	modified:   content/_build/html/_static/doctools.js
+	modified:   content/_build/html/_static/language_data.js
+	modified:   content/_build/html/_static/pygments.css
+	modified:   content/_build/html/_static/searchtools.js
+	modified:   content/_build/html/_static/underscore.js
+	modified:   content/_build/html/_static/webpack-macros.html
+	modified:   content/_build/html/genindex.html
+	modified:   content/_build/html/intro.html
+	modified:   content/_build/html/markdown.html
+	modified:   content/_build/html/notebooks/Introduction/Data_Import_and_Review.html
+	modified:   content/_build/html/notebooks/Introduction/Example_Notebook.html
+	modified:   content/_build/html/notebooks/Notebook_1/Notebook_1.html
+	modified:   content/_build/html/notebooks/Notebook_1/Notebook_2.html
+	modified:   content/_build/html/notebooks/Notebook_2/Notebook_2.html
+	modified:   content/_build/html/notebooks/Notebook_3/Notebook_3.html
+	modified:   content/_build/html/notebooks/Notebook_4/Notebook_4.html
+	modified:   content/_build/html/notebooks/Notebook_5/Notebook_5.html
+	modified:   content/_build/html/reports/Data_Import_and_Review.log
+	modified:   content/_build/html/reports/Notebook_2.log
+	modified:   content/_build/html/reports/Notebook_4.log
+	modified:   content/_build/html/reports/Notebook_5.log
+	modified:   content/_build/html/search.html
+	modified:   content/_build/html/searchindex.js
+	modified:   content/_build/jupyter_execute/notebooks/Introduction/Data_Import_and_Review.ipynb
+	modified:   content/_build/jupyter_execute/notebooks/Introduction/Data_Import_and_Review.py
+	modified:   content/_build/jupyter_execute/notebooks/Introduction/Example_Notebook.ipynb
+	modified:   content/_build/jupyter_execute/notebooks/Introduction/Example_Notebook.py
+	modified:   content/_build/jupyter_execute/notebooks/Introduction/Example_Notebook_15_1.png
+	modified:   content/_build/jupyter_execute/notebooks/Notebook_1/Notebook_1.ipynb
+	modified:   content/_build/jupyter_execute/notebooks/Notebook_1/Notebook_1.py
+	modified:   content/_build/jupyter_execute/notebooks/Notebook_1/Notebook_1_13_1.png
+	modified:   content/_build/jupyter_execute/notebooks/Notebook_1/Notebook_1_20_1.png
+	modified:   content/_build/jupyter_execute/notebooks/Notebook_1/Notebook_1_23_1.png
+	modified:   content/_build/jupyter_execute/notebooks/Notebook_1/Notebook_2.ipynb
+	modified:   content/_build/jupyter_execute/notebooks/Notebook_1/Notebook_2.py
+	modified:   content/_build/jupyter_execute/notebooks/Notebook_2/Notebook_2.ipynb
+	modified:   content/_build/jupyter_execute/notebooks/Notebook_2/Notebook_2.py
+	modified:   content/_build/jupyter_execute/notebooks/Notebook_2/Notebook_2_11_1.png
+	modified:   content/_build/jupyter_execute/notebooks/Notebook_2/Notebook_2_22_0.png
+	modified:   content/_build/jupyter_execute/notebooks/Notebook_2/Notebook_2_30_0.png
+	modified:   content/_build/jupyter_execute/notebooks/Notebook_3/Notebook_3.ipynb
+	modified:   content/_build/jupyter_execute/notebooks/Notebook_3/Notebook_3.py
+	modified:   content/_build/jupyter_execute/notebooks/Notebook_3/Notebook_3_17_1.png
+	modified:   content/_build/jupyter_execute/notebooks/Notebook_3/Notebook_3_20_1.png
+	modified:   content/_build/jupyter_execute/notebooks/Notebook_3/Notebook_3_42_1.png
+	modified:   content/_build/jupyter_execute/notebooks/Notebook_3/Notebook_3_46_0.png
+	modified:   content/_build/jupyter_execute/notebooks/Notebook_4/Notebook_4.ipynb
+	modified:   content/_build/jupyter_execute/notebooks/Notebook_4/Notebook_4.py
+	modified:   content/_build/jupyter_execute/notebooks/Notebook_4/Notebook_4_6_0.png
+	modified:   content/_build/jupyter_execute/notebooks/Notebook_5/Notebook_5.ipynb
+	modified:   content/_build/jupyter_execute/notebooks/Notebook_5/Notebook_5.py
+	modified:   content/_config.yml
+	modified:   content/_toc.yml
+	modified:   content/notebooks/Notebook_2/Notebook_2.ipynb
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	content/_build/html/_images/station.png
+	content/_build/html/_images/transducer.png
+	content/_build/html/_static/check-solid.svg
+	content/_build/html/_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css
+	content/_build/html/_static/css/theme.css
+	content/_build/html/_static/js/index.1c5a1a01449ed65a7b51.js
+	content/_build/html/_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js
+	content/_build/html/_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css
+	content/_build/html/_static/underscore-1.3.1.js
+	status1.txt
+
