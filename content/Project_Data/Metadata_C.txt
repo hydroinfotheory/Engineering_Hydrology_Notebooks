@@ -1,4 +1,4 @@
-Measurement team: B
+Measurement team: C
 Date and time of measurement: 2012-06-11 13:15
 Salt concentration of calibration solution is: 10 g/l
 Salt mass injected: 50 Kg
