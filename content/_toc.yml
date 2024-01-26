@@ -3,20 +3,21 @@ root: intro
 parts:
 - caption: Introduction
   chapters:
-  - file: notebooks/Introduction/Example_Notebook
   - file: notebooks/Introduction/Data_Import_and_Review
+  - file: notebooks/Introduction/Example_Notebook
 - caption: Flow Measurement
   chapters:
   - file: notebooks/Notebook_1/Notebook_1
 - caption: Rating Curve Development
   chapters:
   - file: notebooks/Notebook_2/Notebook_2
-- caption: Extreme Values, Uncertainty, and Risk
+- caption: Regional Information Transfer
   chapters:
   - file: notebooks/Notebook_3/Notebook_3
-- caption: Regional Regression
+- caption: Hydrological Modelling
   chapters:
   - file: notebooks/Notebook_4/Notebook_4
-- caption: Rainfall-Runoff Model
+  - file: notebooks/Notebook_RR_Model/RR_Model
+- caption: Extreme Values, Uncertainty, and Risk
   chapters:
   - file: notebooks/Notebook_5/Notebook_5
