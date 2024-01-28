@@ -1,6 +1,7 @@
 Measurement team: A
 Date and time of measurement: 2012-06-15 12:32
 Salt concentration of calibration solution is: 10 g/l
+Initial stream water volume for calibration: 500 ml
 Salt mass injected: 50 Kg
 Probe location: Left Bank (probe 1)
 Mixing reach length: 180 m
