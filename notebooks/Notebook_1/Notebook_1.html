@@ -395,6 +395,43 @@
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># new code to detect whether running in google colab, and correctly setting working directory if so</span>
+
+<span class="c1">#from os import path (not needed because os already loaded in cell above)</span>
+
+<span class="c1"># mount google drive</span>
+
+<span class="c1"># try command that only works when in google colab</span>
+<span class="k">try</span><span class="p">:</span>
+
+  <span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+  <span class="n">in_colab</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="c1"># if it fails, we are not running from google colab</span>
+<span class="k">except</span><span class="p">:</span>
+  <span class="n">in_colab</span> <span class="o">=</span> <span class="kc">False</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Not in Colab&#39;</span><span class="p">)</span>
+
+<span class="c1"># if we are in colab, mount the google drive and set working directory location to the standard download location</span>
+<span class="k">if</span> <span class="n">in_colab</span><span class="p">:</span>
+  <span class="k">if</span> <span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s1">&#39;/content/google_drive&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Drive already mounted&#39;</span><span class="p">)</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/google_drive&#39;</span><span class="p">)</span>
+
+    <span class="c1"># move working directory to file location</span>
+    <span class="c1">#default should work, but change if using a different location</span>
+    <span class="o">%</span><span class="k">cd</span> &#39;google_drive/MyDrive/Engineering_Hydrology_Notebooks/content/notebooks/Notebook_1&#39;  # Needs to be manually set for each notebook
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Not in Colab
+</pre></div>
+</div>
+</div>
+</div>
 <div class="section" id="notebook-1-flow-measurement-using-the-salt-dilution-method">
 <h1>Notebook 1: Flow Measurement using the Salt Dilution Method<a class="headerlink" href="#notebook-1-flow-measurement-using-the-salt-dilution-method" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="introduction">
@@ -742,10 +779,10 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f5791401e20&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f03f5db3520&gt;
 </pre></div>
 </div>
-<img alt="../../_images/Notebook_1_13_1.png" src="../../_images/Notebook_1_13_1.png" />
+<img alt="../../_images/Notebook_1_14_1.png" src="../../_images/Notebook_1_14_1.png" />
 </div>
 </div>
 <div class="section" id="best-fit-slope-and-coefficient-of-determination-r-2-of-calibration-points">
@@ -890,7 +927,7 @@ The coefficient of determination of the calibration is 1.000.
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;Time (s)&#39;&gt;
 </pre></div>
 </div>
-<img alt="../../_images/Notebook_1_19_1.png" src="../../_images/Notebook_1_19_1.png" />
+<img alt="../../_images/Notebook_1_20_1.png" src="../../_images/Notebook_1_20_1.png" />
 </div>
 </div>
 </div>
@@ -941,10 +978,10 @@ The coefficient of determination of the calibration is 1.000.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f5790b468b0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f03f54fafd0&gt;
 </pre></div>
 </div>
-<img alt="../../_images/Notebook_1_22_1.png" src="../../_images/Notebook_1_22_1.png" />
+<img alt="../../_images/Notebook_1_23_1.png" src="../../_images/Notebook_1_23_1.png" />
 </div>
 </div>
 </div>
