@@ -45,8 +45,6 @@
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -415,14 +413,15 @@
 
 <span class="c1"># if we are in colab, mount the google drive and set working directory location to the standard download location</span>
 <span class="k">if</span> <span class="n">in_colab</span><span class="p">:</span>
-  <span class="k">if</span> <span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s1">&#39;/content/google_drive&#39;</span><span class="p">):</span>
+  <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s1">&#39;/content/google_drive&#39;</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Drive already mounted&#39;</span><span class="p">)</span>
   <span class="k">else</span><span class="p">:</span>
     <span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/google_drive&#39;</span><span class="p">)</span>
 
     <span class="c1"># move working directory to file location</span>
     <span class="c1">#default should work, but change if using a different location</span>
-    <span class="o">%</span><span class="k">cd</span> &#39;google_drive/MyDrive/Engineering_Hydrology_Notebooks/content/notebooks/Notebook_1&#39;  # Needs to be manually set for each notebook
+    <span class="o">%</span><span class="k">cd</span> &#39;google_drive/MyDrive/Engineering_Hydrology_Notebooks/content/notebooks/Notebook_1&#39;
+    <span class="c1"># Needs to be manually set for each notebook</span>
 </pre></div>
 </div>
 </div>
@@ -779,7 +778,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f03f5db3520&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f5be7dda460&gt;
 </pre></div>
 </div>
 <img alt="../../_images/Notebook_1_14_1.png" src="../../_images/Notebook_1_14_1.png" />
@@ -978,7 +977,7 @@ The coefficient of determination of the calibration is 1.000.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f03f54fafd0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f5be7523fd0&gt;
 </pre></div>
 </div>
 <img alt="../../_images/Notebook_1_23_1.png" src="../../_images/Notebook_1_23_1.png" />
