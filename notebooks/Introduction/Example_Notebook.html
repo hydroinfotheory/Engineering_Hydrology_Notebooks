@@ -324,6 +324,44 @@
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># new code to detect whether running in google colab, and correctly setting working directory if so</span>
+
+<span class="c1">#from os import path (not needed because os already loaded in cell above)</span>
+
+<span class="c1"># mount google drive</span>
+
+<span class="c1"># try command that only works when in google colab</span>
+<span class="k">try</span><span class="p">:</span>
+
+  <span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+  <span class="n">in_colab</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="c1"># if it fails, we are not running from google colab</span>
+<span class="k">except</span><span class="p">:</span>
+  <span class="n">in_colab</span> <span class="o">=</span> <span class="kc">False</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Not in Colab&#39;</span><span class="p">)</span>
+
+<span class="c1"># if we are in colab, mount the google drive and set working directory location to the standard download location</span>
+<span class="k">if</span> <span class="n">in_colab</span><span class="p">:</span>
+  <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s1">&#39;/content/google_drive&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Drive already mounted&#39;</span><span class="p">)</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/google_drive&#39;</span><span class="p">)</span>
+
+    <span class="c1"># move working directory to file location</span>
+    <span class="c1">#default should work, but change if using a different location</span>
+    <span class="o">%</span><span class="k">cd</span> &#39;google_drive/MyDrive/Engineering_Hydrology_Notebooks/content/notebooks/Introduction&#39;  
+    <span class="c1"># Needs to be manually set for each notebook</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Not in Colab
+</pre></div>
+</div>
+</div>
+</div>
 <div class="section" id="example-clausius-clapeyron-equation">
 <h1>Example: Clausius-Clapeyron Equation<a class="headerlink" href="#example-clausius-clapeyron-equation" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="introduction">
@@ -449,7 +487,7 @@
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Saturation Vapour Pressure (kPa)&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/Example_Notebook_13_1.png" src="../../_images/Example_Notebook_13_1.png" />
+<img alt="../../_images/Example_Notebook_14_1.png" src="../../_images/Example_Notebook_14_1.png" />
 </div>
 </div>
 <p>Below we’ll create a function to calculate dewpoint temperature that uses the vapour pressure function above.</p>
@@ -517,7 +555,7 @@
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Dewpoint Temperature (Celsius)&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/Example_Notebook_20_1.png" src="../../_images/Example_Notebook_20_1.png" />
+<img alt="../../_images/Example_Notebook_21_1.png" src="../../_images/Example_Notebook_21_1.png" />
 </div>
 </div>
 <p>Let’s get really fancy and create a heat map to express the relationship between ambient air temperature, relative humidity, and dewpoint temperature.</p>
@@ -574,7 +612,7 @@
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Dewpoint Temperature [degrees Celsius]&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/Example_Notebook_24_1.png" src="../../_images/Example_Notebook_24_1.png" />
+<img alt="../../_images/Example_Notebook_25_1.png" src="../../_images/Example_Notebook_25_1.png" />
 </div>
 </div>
 <div class="section" id="other-examples-of-functions-related-to-atmospheric-energy-balance">
