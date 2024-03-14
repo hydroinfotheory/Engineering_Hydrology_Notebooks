@@ -1,382 +1,430 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>Notebook 1: Flow Measurement using the Salt Dilution Method &#8212; Engineering Hydrology</title>
-    
-  <link href="../../_static/css/theme.css" rel="stylesheet" />
-  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    
-      
-
-    
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
-  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/Notebook_1/Notebook_1';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Notebook 2: Rating Curve Development" href="../Notebook_2/Notebook_2.html" />
     <link rel="prev" title="Example: Clausius-Clapeyron Equation" href="../Introduction/Example_Notebook.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
     
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../index.html">
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
       
-      <img src="../../_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Engineering Hydrology</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../intro.html">
-   Foreword
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Introduction
- </span>
-</p>
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Engineering Hydrology - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Engineering Hydrology - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Foreword
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../Introduction/Data_Import_and_Review.html">
-   Example: Data Import, Review, and Workflow
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Introduction/Example_Notebook.html">
-   Example: Clausius-Clapeyron Equation
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Data_Import_and_Review.html">Example: Data Import, Review, and Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Example_Notebook.html">Example: Clausius-Clapeyron Equation</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Flow Measurement
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Flow Measurement</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Notebook 1: Flow Measurement using the Salt Dilution Method
-  </a>
- </li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Notebook 1: Flow Measurement using the Salt Dilution Method</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Rating Curve Development
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Rating Curve Development</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../Notebook_2/Notebook_2.html">
-   Notebook 2: Rating Curve Development
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../Notebook_2/Notebook_2.html">Notebook 2: Rating Curve Development</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Regional Information Transfer
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Regional Information Transfer</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../Notebook_3/Notebook_3.html">
-   Notebook 3: Regional Information Transfer
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../Notebook_3/Notebook_3.html">Notebook 3: Regional Information Transfer</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Hydrological Modelling
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Hydrological Modelling</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../Notebook_4/Notebook_4.html">
-   Notebook 4: Rational Method, Unit Hydrograph, Lumped &amp; Distributed Models
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../Notebook_RR_Model/RR_Model.html">
-   Conceptual Rainfall-Runoff Model
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../Notebook_4/Notebook_4.html">Notebook 4: Rational Method, Unit Hydrograph, Lumped &amp; Distributed Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Notebook_RR_Model/RR_Model.html">Conceptual Rainfall-Runoff Model</a></li>
+
+
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Extreme Values, Uncertainty, and Risk
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Extreme Values, Uncertainty, and Risk</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../Notebook_5/Notebook_5.html">
-   Notebook 5: Extreme Values, Uncertainty, and Risk
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../Notebook_5/Notebook_5.html">Notebook 5: Extreme Values, Uncertainty, and Risk</a></li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/notebooks/Notebook_1/Notebook_1.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+</nav></div>
     </div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
-            <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/hydroinfotheory/Engineering_Hydrology_Notebooks"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/hydroinfotheory/Engineering_Hydrology_Notebooks/issues/new?title=Issue%20on%20page%20%2Fnotebooks/Notebook_1/Notebook_1.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+      </div>
+      
+      <main id="main-content" class="bd-main">
         
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/hydroinfotheory/Engineering_Hydrology_Notebooks" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/hydroinfotheory/Engineering_Hydrology_Notebooks/issues/new?title=Issue%20on%20page%20%2Fnotebooks/Notebook_1/Notebook_1.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
 
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/hydroinfotheory/Engineering_Hydrology_Notebooks/main?urlpath=tree/content/notebooks/Notebook_1/Notebook_1.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/notebooks/Notebook_1/Notebook_1.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
     </div>
+  
 </div>
+</div>
+              
+              
 
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Notebook 1: Flow Measurement using the Salt Dilution Method</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div>
+                <h2> Contents </h2>
             </div>
-            <nav id="bd-toc-nav">
+            <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   Introduction
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#given-information">
-     Given Information:
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#import-the-salt-dilution-data">
-   Import the Salt Dilution Data
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#plot-the-calibration-and-best-fit-line">
-   Plot the calibration and best fit line
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#best-fit-slope-and-coefficient-of-determination-r-2-of-calibration-points">
-     Best Fit slope and coefficient of determination (
-     <span class="math notranslate nohighlight">
-      \(R^2\)
-     </span>
-     ) of calibration points
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#flow-measurement">
-   Flow measurement
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#plot-the-salt-dilution-measurement">
-     Plot the salt dilution measurement
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#specify-background-and-measurement-periods">
-     Specify background and measurement periods
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#calculate-discharge">
-   Calculate Discharge
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#notebook-reflection">
-   Notebook Reflection
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#question-1">
-     Question 1:
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#question-2">
-     Question 2:
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#additional-info">
-   Additional Info
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#temperature-compensation-for-conductivity">
-     Temperature Compensation for Conductivity
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#references">
-   References
-  </a>
- </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#given-information">Given Information:</a></li>
 </ul>
-
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-the-salt-dilution-data">Import the Salt Dilution Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-the-calibration-and-best-fit-line">Plot the calibration and best fit line</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#best-fit-slope-and-coefficient-of-determination-r-2-of-calibration-points">Best Fit slope and coefficient of determination (<span class="math notranslate nohighlight">\(R^2\)</span>) of calibration points</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flow-measurement">Flow measurement</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-the-salt-dilution-measurement">Plot the salt dilution measurement</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specify-background-and-measurement-periods">Specify background and measurement periods</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-discharge">Calculate Discharge</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notebook-reflection">Notebook Reflection</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2">Question 2:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-info">Additional Info</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#temperature-compensation-for-conductivity">Temperature Compensation for Conductivity</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
             </nav>
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
-              <div>
+
+              
                 
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import libraries</span>
@@ -431,15 +479,15 @@
 </div>
 </div>
 </div>
-<div class="section" id="notebook-1-flow-measurement-using-the-salt-dilution-method">
-<h1>Notebook 1: Flow Measurement using the Salt Dilution Method<a class="headerlink" href="#notebook-1-flow-measurement-using-the-salt-dilution-method" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<section class="tex2jax_ignore mathjax_ignore" id="notebook-1-flow-measurement-using-the-salt-dilution-method">
+<h1>Notebook 1: Flow Measurement using the Salt Dilution Method<a class="headerlink" href="#notebook-1-flow-measurement-using-the-salt-dilution-method" title="Permalink to this heading">#</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
 <p><a class="reference external" href="https://doi.org/10.1002/hyp.3360070212">Flow measurement by salt dilution</a><span class="math notranslate nohighlight">\(^{[1]}\)</span> is a type of tracer method where the natural conductivity of stream water is temporarily raised by adding (dissolving) a known mass of tracer into the stream, and measuring a response downstream.  Tracer methods can be done by slug injection or steady-state.  A “slug” is a known mass of tracer that dissolves and mixes in the stream.  The steady-state method is a constant injection of a dissolved tracer of known concentration.  Both methods are suited to lower flows where a sufficient signal-to-noise ratio can be acheived with a relatively small amount of tracer, and to turbulent flows where adequate mixing of the tracer can be achieved.  Table salt is commonly used for measurement because it is cheap and practical for field measurement, and the concentration and durations are small compared to <a class="reference external" href="https://doi.org/10.1016/j.envpol.2017.01.040">observed levels of toxicity</a><span class="math notranslate nohighlight">\(^{[2]}\)</span>.</p>
 <p>This notebook introduces the instrument calibration and measurement data processing for a salt dilution streamflow measurement using the slug tracer method.  More information on the steady-state method can be found <a class="reference external" href="https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.454.1620&amp;rep=rep1&amp;type=pdf&amp;bcgovtm=new%20west%20record">here</a>.  At the end of this notebook, there is an open ended question that asks you to reflect on the content of the notebook.</p>
-<div class="section" id="given-information">
-<h3>Given Information:<a class="headerlink" href="#given-information" title="Permalink to this headline">¶</a></h3>
-<table class="colwidths-auto table">
+<section id="given-information">
+<h3>Given Information:<a class="headerlink" href="#given-information" title="Permalink to this heading">#</a></h3>
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Parameter</p></th>
 <th class="head"><p>Value</p></th>
@@ -469,10 +517,10 @@
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-<div class="section" id="import-the-salt-dilution-data">
-<h2>Import the Salt Dilution Data<a class="headerlink" href="#import-the-salt-dilution-data" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="import-the-salt-dilution-data">
+<h2>Import the Salt Dilution Data<a class="headerlink" href="#import-the-salt-dilution-data" title="Permalink to this heading">#</a></h2>
 <p>In a salt dilution measurement, we first calibrate the instrument using known concentrations of salt solution.</p>
 <p>The calibration data is provided in a file named <strong>SD_cal.csv</strong>, and it’s saved under:</p>
 <blockquote>
@@ -606,7 +654,7 @@
 <div><p><strong>Note</strong>: several columns contain <code class="docutils literal notranslate"><span class="pre">NaN</span></code>.  We need to update these columns based on the calibration procedure.</p>
 </div></blockquote>
 <p>The calibration procedure is as follows:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Collect a sample of river water with a known volume (500mL is the first entry in the <code class="docutils literal notranslate"><span class="pre">Calibration</span> <span class="pre">Volume</span> <span class="pre">(ml)</span></code> column.)  Let’s call this the <strong>control sample</strong>.</p></li>
 <li><p>Measure the baseline conductivity of the control sample.</p></li>
 <li><p>Add a known volume of calibration solution to the control sample (the <code class="docutils literal notranslate"><span class="pre">Calibration</span> <span class="pre">solution</span> <span class="pre">added</span> <span class="pre">(ml)</span></code> column indicates how much solution we add at each calibration step.  In this case, it’s 1.0 millilitres.</p></li>
@@ -735,9 +783,9 @@
 </table>
 </div></div></div>
 </div>
-</div>
-<div class="section" id="plot-the-calibration-and-best-fit-line">
-<h2>Plot the calibration and best fit line<a class="headerlink" href="#plot-the-calibration-and-best-fit-line" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="plot-the-calibration-and-best-fit-line">
+<h2>Plot the calibration and best fit line<a class="headerlink" href="#plot-the-calibration-and-best-fit-line" title="Permalink to this heading">#</a></h2>
 <p>The sevel calibration points are plotted below as a series of red circles.  The best fit line through the calibration points is represented by a dashed blue line.</p>
 <blockquote>
 <div><p><strong>Note</strong>:  More information on specifying the appearance of plots can be found in the <a class="reference external" href="https://matplotlib.org/3.1.0/api/markers_api.html#module-matplotlib.markers">matplotlib documentation</a>. In the plot below, the red circle is specified by the short-form string <code class="docutils literal notranslate"><span class="pre">'ro'</span></code> and the dashed blue line is specified by the three character code <code class="docutils literal notranslate"><span class="pre">'b--'</span></code>.</p>
@@ -778,14 +826,14 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f5be7dda460&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fd1263473a0&gt;
 </pre></div>
 </div>
-<img alt="../../_images/Notebook_1_14_1.png" src="../../_images/Notebook_1_14_1.png" />
+<img alt="../../_images/51441dab1dadf0e25127b3d716ffaee8d8b95c8002a81dd08177417fd8c0bf3a.png" src="../../_images/51441dab1dadf0e25127b3d716ffaee8d8b95c8002a81dd08177417fd8c0bf3a.png" />
 </div>
 </div>
-<div class="section" id="best-fit-slope-and-coefficient-of-determination-r-2-of-calibration-points">
-<h3>Best Fit slope and coefficient of determination (<span class="math notranslate nohighlight">\(R^2\)</span>) of calibration points<a class="headerlink" href="#best-fit-slope-and-coefficient-of-determination-r-2-of-calibration-points" title="Permalink to this headline">¶</a></h3>
+<section id="best-fit-slope-and-coefficient-of-determination-r-2-of-calibration-points">
+<h3>Best Fit slope and coefficient of determination (<span class="math notranslate nohighlight">\(R^2\)</span>) of calibration points<a class="headerlink" href="#best-fit-slope-and-coefficient-of-determination-r-2-of-calibration-points" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#note: the number of decimals in the slope is too low. adjust the line below to print one more decimal.</span>
@@ -804,12 +852,12 @@ The coefficient of determination of the calibration is 1.000.
 <blockquote>
 <div><p><strong>Note</strong>: Above, the print statement string has an <code class="docutils literal notranslate"><span class="pre">f</span></code> before the opening quotation <code class="docutils literal notranslate"><span class="pre">&quot;</span></code>, which enables the insertion of variables into the string.  This is done using the <code class="docutils literal notranslate"><span class="pre">{}</span></code> symbol and a ‘type’ specifier.  In this case, the values inside the curly brackets <code class="docutils literal notranslate"><span class="pre">{slope:.2f}</span></code> means I want a <strong>float</strong> of <strong>2</strong> decimal places.  There are a number of ways to insert variables into strings for output.  More information on string formatting can be <a class="reference external" href="https://www.python.org/dev/peps/pep-3101/">found here</a>.</p>
 </div></blockquote>
-</div>
-</div>
-<div class="section" id="flow-measurement">
-<h2>Flow measurement<a class="headerlink" href="#flow-measurement" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="plot-the-salt-dilution-measurement">
-<h3>Plot the salt dilution measurement<a class="headerlink" href="#plot-the-salt-dilution-measurement" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="flow-measurement">
+<h2>Flow measurement<a class="headerlink" href="#flow-measurement" title="Permalink to this heading">#</a></h2>
+<section id="plot-the-salt-dilution-measurement">
+<h3>Plot the salt dilution measurement<a class="headerlink" href="#plot-the-salt-dilution-measurement" title="Permalink to this heading">#</a></h3>
 <p>Now we’ll use the second data file.  Recall that the first file was for calibration.  The EC sensor was placed in a measured volume of water, and calibration solution was added in measured amounts to record the change in conductivity.</p>
 <p>For the actual measurement of flow in the creek, the EC sensor is placed in the creek some distance downstream of the where a known mass of salt is deposited and mixed.</p>
 <p>Below we plot the conductivity over time, and we also determine what the ‘background’ conductivity was in order to calculate the area under the conductivity curve.  It turns out there is a lot of interesting information about runoff processes contained in the background EC signal.</p>
@@ -926,12 +974,12 @@ The coefficient of determination of the calibration is 1.000.
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:xlabel=&#39;Time (s)&#39;&gt;
 </pre></div>
 </div>
-<img alt="../../_images/Notebook_1_20_1.png" src="../../_images/Notebook_1_20_1.png" />
+<img alt="../../_images/971a160a8caa29e9a3e37724728be2e7575ce1f2a4686fb1de27b10d858e11f7.png" src="../../_images/971a160a8caa29e9a3e37724728be2e7575ce1f2a4686fb1de27b10d858e11f7.png" />
 </div>
 </div>
-</div>
-<div class="section" id="specify-background-and-measurement-periods">
-<h3>Specify background and measurement periods<a class="headerlink" href="#specify-background-and-measurement-periods" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="specify-background-and-measurement-periods">
+<h3>Specify background and measurement periods<a class="headerlink" href="#specify-background-and-measurement-periods" title="Permalink to this heading">#</a></h3>
 <p>We need to establish the background conductivity, or the natural conductivity of the stream prior to the measurement.  Use the plot above to establish a first guess at both the background period and the measurement period.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -977,16 +1025,16 @@ The coefficient of determination of the calibration is 1.000.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f5be7523fd0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fd125db2a60&gt;
 </pre></div>
 </div>
-<img alt="../../_images/Notebook_1_23_1.png" src="../../_images/Notebook_1_23_1.png" />
+<img alt="../../_images/2aa389eb99f64608599f2571c7a83b6c4e70ba025f1bc0ebf9bb475cb30ed381.png" src="../../_images/2aa389eb99f64608599f2571c7a83b6c4e70ba025f1bc0ebf9bb475cb30ed381.png" />
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="calculate-discharge">
-<h2>Calculate Discharge<a class="headerlink" href="#calculate-discharge" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="calculate-discharge">
+<h2>Calculate Discharge<a class="headerlink" href="#calculate-discharge" title="Permalink to this heading">#</a></h2>
 <p>The volumetric flow (discharge) is equal to the area under the salt dilution curve, minus the background EC.</p>
 <p>Calculate the area under the curve:</p>
 <p>The area is: $<span class="math notranslate nohighlight">\(A_{curve} = \sum_{i=start}^{end} (ECT_i - ECT_{BG,i}) \cdot Slope_{calibration} \cdot t_{step,i} = \frac{\mu S}{cm} \cdot \frac {mg/L}{\mu S/cm} \cdot s = \frac {mg}{L} \cdot s\)</span><span class="math notranslate nohighlight">\(
@@ -1058,9 +1106,9 @@ Then discharge (Q) is calculated by: \)</span>\frac{m_{salt}}{A_{curve}} = \frac
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="notebook-reflection">
-<h2>Notebook Reflection<a class="headerlink" href="#notebook-reflection" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="notebook-reflection">
+<h2>Notebook Reflection<a class="headerlink" href="#notebook-reflection" title="Permalink to this heading">#</a></h2>
 <p>In this notebook, we demonstrated how a salt dilution measurement is processed, including calibration and calculation of volumetric flow.  There are a number of sources of uncertainty in this process.  Provide short written responses to the questions below.  It is recommended to use this notebook to get a sense of the sensitivity of the resulting volumetric flow calculation to various input parameters.</p>
 <p>Near the start of the notebook, we set variables associated with the calibration of the EC sensor:</p>
 <ul class="simple">
@@ -1068,25 +1116,25 @@ Then discharge (Q) is calculated by: \)</span>\frac{m_{salt}}{A_{curve}} = \frac
 <li><p><code class="docutils literal notranslate"><span class="pre">cal_solution_concn</span></code>: the concentration of our calibration solution, and</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cal_vol_increment</span></code>: the incremental volume of calibration solution added to the calibration volume</p></li>
 </ul>
-<div class="section" id="question-1">
-<h3>Question 1:<a class="headerlink" href="#question-1" title="Permalink to this headline">¶</a></h3>
+<section id="question-1">
+<h3>Question 1:<a class="headerlink" href="#question-1" title="Permalink to this heading">#</a></h3>
 <p>Comment on the effect of errors in the <em>accuracy</em> of the three calibration variables.  Which variable results in the greatest change to the calculated discharge if the variable is changed by +/- 10%?  In other words, what is the <em>sensitivity</em> of the result (measured flow) to each of the three calibration variables, in relative, qualitative terms?</p>
-</div>
-<div class="section" id="question-2">
-<h3>Question 2:<a class="headerlink" href="#question-2" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="question-2">
+<h3>Question 2:<a class="headerlink" href="#question-2" title="Permalink to this heading">#</a></h3>
 <p>Above, we manually set the start and end of the salt injection measurement (marked in the plot by the green dots) using the <code class="docutils literal notranslate"><span class="pre">msmt_start</span></code> and <code class="docutils literal notranslate"><span class="pre">msmt_end</span></code> variables.  In some flow conditions, the EC reading will take a very long time to return to baseline.  The realities of field work (time constraints, battery power, etc) occassionally result in the ‘tail’ of the measurement curve being cut off.  What happens to the calculated discharge if the EC measurement stops unexpectedly before the EC returns to baseline?  Go back in the notebook and change the <code class="docutils literal notranslate"><span class="pre">msmt_end</span></code> time and comment on the effect on the calculated discharge.</p>
-</div>
-</div>
-<div class="section" id="additional-info">
-<h2>Additional Info<a class="headerlink" href="#additional-info" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="temperature-compensation-for-conductivity">
-<h3>Temperature Compensation for Conductivity<a class="headerlink" href="#temperature-compensation-for-conductivity" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="additional-info">
+<h2>Additional Info<a class="headerlink" href="#additional-info" title="Permalink to this heading">#</a></h2>
+<section id="temperature-compensation-for-conductivity">
+<h3>Temperature Compensation for Conductivity<a class="headerlink" href="#temperature-compensation-for-conductivity" title="Permalink to this heading">#</a></h3>
 <p>The electrical conductivity (EC) of water is a function of temperature, so it is important that the water used for calibration is the same temperature as the water in the stream being measured.  Alternatively, a temperature correction can be applied.  For the data in this notebook, the instrument used for flow measurement has a thermometer, so temperature compensation is built into the instrument.</p>
 <p>Two different methods of temperature compensation are provided below for reference, the first is an <a class="reference external" href="https://standards.iteh.ai/catalog/standards/cen/3978cdbc-b72f-459e-9275-99e7fc2b4b84/en-27888-1993">EU standard for the determination of electrical conductivity</a>, and the second is a <span class="xref myst">linear approximation of conductivity</span><span class="math notranslate nohighlight">\(^{[3]}\)</span> as a function of temperature.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">eu_std_ect_adjust</span><span class="p">(</span><span class="n">temp</span><span class="p">,</span> <span class="n">ec</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Takes in a temperature (Theta), and an EC value,</span>
 <span class="sd">    returns a temperature adjusted ECT value</span>
 <span class="sd">    based on EU standard 27888 conversion.</span>
@@ -1105,7 +1153,7 @@ Then discharge (Q) is calculated by: \)</span>\frac{m_{salt}}{A_{curve}} = \frac
     <span class="k">return</span> <span class="n">ec</span> <span class="o">*</span> <span class="n">f25</span>
 
 <span class="k">def</span> <span class="nf">linear2_ect_adjust</span><span class="p">(</span><span class="n">temp</span><span class="p">,</span> <span class="n">ec</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Takes in a temperature (temp), and an EC value (ec),</span>
 <span class="sd">    returns a temperature adjusted ECT value</span>
 <span class="sd">    based on linear interpolation assuming</span>
@@ -1135,17 +1183,17 @@ Then discharge (Q) is calculated by: \)</span>\frac{m_{salt}}{A_{curve}} = \frac
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section" id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
-<ol class="simple">
+</section>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
 <li><p>Kite, Geoff. “Computerized streamflow measurement using slug injection.” <em>Hydrological processes</em> 7.2 (1993): 227-233.</p></li>
 <li><p>Hintz, William D., and Rick A. Relyea. “Impacts of road deicing salts on the early-life growth and development of a stream salmonid: salt type matters.” <em>Environmental pollution</em> 223 (2017): 409-415.</p></li>
 <li><p>Smith, Stanford H. “TEMPERATURE CORRECTION IN CONDUCTIVITY MEASUREMENTS 1.” <em>Limnology and Oceanography</em> 7.3 (1962): 330-334.</p></li>
 </ol>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1159,7 +1207,7 @@ Then discharge (Q) is calculated by: \)</span>\frac{m_{salt}}{A_{curve}} = \frac
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./notebooks/Notebook_1"
         },
         predefinedOutput: true
@@ -1167,36 +1215,126 @@ Then discharge (Q) is calculated by: \)</span>\frac{m_{salt}}{A_{curve}} = \frac
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-        
-        <div class='prev-next-bottom'>
-            
-    <a class='left-prev' id="prev-link" href="../Introduction/Example_Notebook.html" title="previous page">Example: Clausius-Clapeyron Equation</a>
-    <a class='right-next' id="next-link" href="../Notebook_2/Notebook_2.html" title="next page">Notebook 2: Rating Curve Development</a>
 
-        </div>
-        
-        </div>
-    </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          By Dan Kovacek and Steven Weijs<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
-</main>
-
-
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../Introduction/Example_Notebook.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Example: Clausius-Clapeyron Equation</p>
       </div>
-    </div>
-  
-  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+    </a>
+    <a class="right-next"
+       href="../Notebook_2/Notebook_2.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Notebook 2: Rating Curve Development</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#given-information">Given Information:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-the-salt-dilution-data">Import the Salt Dilution Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-the-calibration-and-best-fit-line">Plot the calibration and best fit line</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#best-fit-slope-and-coefficient-of-determination-r-2-of-calibration-points">Best Fit slope and coefficient of determination (<span class="math notranslate nohighlight">\(R^2\)</span>) of calibration points</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flow-measurement">Flow measurement</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-the-salt-dilution-measurement">Plot the salt dilution measurement</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#specify-background-and-measurement-periods">Specify background and measurement periods</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-discharge">Calculate Discharge</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notebook-reflection">Notebook Reflection</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-1">Question 1:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#question-2">Question 2:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-info">Additional Info</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#temperature-compensation-for-conductivity">Temperature Compensation for Conductivity</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dan Kovacek and Steven Weijs
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

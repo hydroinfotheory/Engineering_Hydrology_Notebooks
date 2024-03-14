@@ -1,0 +1,2321 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Notebook 3: Regional Information Transfer &#8212; Engineering Hydrology</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/Notebook_3/Notebook_3_SW';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Engineering Hydrology - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Engineering Hydrology - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Foreword
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Data_Import_and_Review.html">Example: Data Import, Review, and Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Example_Notebook.html">Example: Clausius-Clapeyron Equation</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Flow Measurement</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Notebook_1/Notebook_1.html">Notebook 1: Flow Measurement using the Salt Dilution Method</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Rating Curve Development</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Notebook_2/Notebook_2.html">Notebook 2: Rating Curve Development</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Regional Information Transfer</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Notebook_3.html">Notebook 3: Regional Information Transfer</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Hydrological Modelling</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Notebook_4/Notebook_4.html">Notebook 4: Rational Method, Unit Hydrograph, Lumped &amp; Distributed Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Notebook_RR_Model/RR_Model.html">Conceptual Rainfall-Runoff Model</a></li>
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Extreme Values, Uncertainty, and Risk</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Notebook_5/Notebook_5.html">Notebook 5: Extreme Values, Uncertainty, and Risk</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/hydroinfotheory/Engineering_Hydrology_Notebooks" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/hydroinfotheory/Engineering_Hydrology_Notebooks/issues/new?title=Issue%20on%20page%20%2Fnotebooks/Notebook_3/Notebook_3_SW.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/notebooks/Notebook_3/Notebook_3_SW.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Notebook 3: Regional Information Transfer</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#characterization-of-long-term-runoff">Characterization of Long-Term Runoff</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-the-data">Import the Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-the-stage-discharge-rating-curve-and-the-best-fit-curve">Plot the Stage-Discharge Rating Curve and the Best Fit Curve</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-daily-average-discharge">Calculate Daily Average Discharge</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-the-rating-curve-and-resultant-flow-series">Plot the Rating Curve and Resultant Flow Series</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cumulative-frequency-the-flow-duration-curve-fdc">Cumulative Frequency: The Flow Duration Curve (FDC)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-regression-of-daily-streamflow">Linear Regression of Daily Streamflow</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chronological-pairing-cp">Chronological Pairing (CP)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#empirical-frequency-pairing">Empirical Frequency Pairing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-up-a-chronological-pairing-regression">Set up a Chronological Pairing Regression</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#obtain-concurrent-data">Obtain Concurrent Data</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regression-plot">Regression Plot</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-long-term-daily-flow-series-for-the-project-location">Create long-term daily flow series for the project location</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compare-the-model-flow-series-to-the-measured-series">Compare the model flow series to the measured series</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#in-the-above-plot-note-general-patterns-specific-exceptions-and-any-trends">In the above plot, note general patterns, specific exceptions, and any trends</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#best-fit">Best-fit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compare-measured-vs-modeled-flow-duration-curves">Compare measured vs. modeled flow duration curves</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estimate-the-long-term-mean-annual-flow-for-our-project-location">Estimate the Long-Term Mean Annual Flow for our Project Location</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions-for-reflection">Questions for Reflection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="notebook-3-regional-information-transfer">
+<h1>Notebook 3: Regional Information Transfer<a class="headerlink" href="#notebook-3-regional-information-transfer" title="Permalink to this heading">#</a></h1>
+<section id="characterization-of-long-term-runoff">
+<h2>Characterization of Long-Term Runoff<a class="headerlink" href="#characterization-of-long-term-runoff" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span> <span class="k">as</span> <span class="n">st</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># new code to detect whether running in google colab, and correctly setting working directory if so</span>
+
+<span class="c1">#from os import path (not needed because os already loaded in cell above)</span>
+
+<span class="c1"># mount google drive</span>
+
+<span class="c1"># try command that only works when in google colab</span>
+<span class="k">try</span><span class="p">:</span>
+
+  <span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+  <span class="n">in_colab</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="c1"># if it fails, we are not running from google colab</span>
+<span class="k">except</span><span class="p">:</span>
+  <span class="n">in_colab</span> <span class="o">=</span> <span class="kc">False</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Not in Colab&#39;</span><span class="p">)</span>
+
+<span class="c1"># if we are in colab, mount the google drive and set working directory location to the standard download location</span>
+<span class="k">if</span> <span class="n">in_colab</span><span class="p">:</span>
+  <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s1">&#39;/content/google_drive&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Drive already mounted&#39;</span><span class="p">)</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/google_drive&#39;</span><span class="p">)</span>
+
+    <span class="c1"># move working directory to file location</span>
+    <span class="c1">#default should work, but change if using a different location</span>
+    <span class="o">%</span><span class="k">cd</span> &#39;google_drive/MyDrive/Engineering_Hydrology_Notebooks/content/notebooks/Notebook_3&#39;  
+    <span class="c1"># Needs to be manually set for each notebook</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Not in Colab
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
+<p>In Notebook 2, we developed a rating curve for our location of interest based on discrete discharge measurements made during a series of visits, and we applied this stage-discharge relationship (rating curve) to the continous stage recorded at our hydrometric station to generate a discharge (flow) time series.</p>
+<p>Recall that our hydrometric station has only been running for a couple of years – this isn’t nearly enough data to estimate the <strong>long term</strong> flow characteristics (daily, seasonal, floods, droughts, etc.).  In this notebook, we look in the vicinity of our project location for other stations where records have been kept for much longer—ideally with complete historical records of 25+ years.  <strong>It’s also critical that we find records that are concurrent with the period we measured at our project location.</strong>  We can use concurrent data from nearby stations to develop a model to estimate flow for periods we didn’t actually measure at our project location.  This type of model is called a <em>regional information transfer</em> model.</p>
+<p>First, we’ll set up our rating curve as we did in Notebook 2 and recalculate the daily average flow series.</p>
+<blockquote>
+<div><p><strong>Note</strong>: throughout these notebooks, the short form cms (cubic metres per second) is used interchangeably, and denoted as <code class="docutils literal notranslate"><span class="pre">m3/s</span></code>, <code class="docutils literal notranslate"><span class="pre">m^3/s</span></code> and  <span class="math notranslate nohighlight">\(m^3/s\)</span>.</p>
+</div></blockquote>
+</section>
+<section id="import-the-data">
+<h2>Import the Data<a class="headerlink" href="#import-the-data" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import the stage data (from the Notebook 2 data folder)</span>
+<span class="c1">#site_df = pd.read_csv(&#39;../../notebook_data/notebook_2_data/WL_data.csv&#39;, parse_dates=[&#39;Date&#39;])</span>
+<span class="c1">#site_df.set_index(&#39;Date&#39;, inplace=True)</span>
+
+
+<span class="n">site_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../../project_data/Crypto_Creek_H_data.csv&#39;</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">],</span><span class="n">na_values</span><span class="o">=</span><span class="s1">&#39;NaN&#39;</span><span class="p">)</span>
+<span class="n">site_df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;Date&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># take a quick look at what we&#39;re dealing with</span>
+<span class="n">site_df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">40</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ID</th>
+      <th>PARAM</th>
+      <th>year</th>
+      <th>month</th>
+      <th>day</th>
+      <th>Value</th>
+    </tr>
+    <tr>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2010-08-25</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>8</td>
+      <td>25</td>
+      <td>0.749</td>
+    </tr>
+    <tr>
+      <th>2010-08-26</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>8</td>
+      <td>26</td>
+      <td>0.794</td>
+    </tr>
+    <tr>
+      <th>2010-08-27</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>8</td>
+      <td>27</td>
+      <td>1.07</td>
+    </tr>
+    <tr>
+      <th>2010-08-28</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>8</td>
+      <td>28</td>
+      <td>0.786</td>
+    </tr>
+    <tr>
+      <th>2010-08-29</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>8</td>
+      <td>29</td>
+      <td>0.635</td>
+    </tr>
+    <tr>
+      <th>2010-08-30</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>8</td>
+      <td>30</td>
+      <td>0.56</td>
+    </tr>
+    <tr>
+      <th>2010-08-31</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>8</td>
+      <td>31</td>
+      <td>0.621</td>
+    </tr>
+    <tr>
+      <th>2010-09-01</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>9</td>
+      <td>1</td>
+      <td>0.727</td>
+    </tr>
+    <tr>
+      <th>2010-09-02</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>9</td>
+      <td>2</td>
+      <td>0.638</td>
+    </tr>
+    <tr>
+      <th>2010-09-03</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>9</td>
+      <td>3</td>
+      <td>0.61</td>
+    </tr>
+    <tr>
+      <th>2010-09-04</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>9</td>
+      <td>4</td>
+      <td>0.6</td>
+    </tr>
+    <tr>
+      <th>2010-09-05</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>9</td>
+      <td>5</td>
+      <td>0.579</td>
+    </tr>
+    <tr>
+      <th>2010-09-06</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>9</td>
+      <td>6</td>
+      <td>0.577</td>
+    </tr>
+    <tr>
+      <th>2010-09-07</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>9</td>
+      <td>7</td>
+      <td>0.55</td>
+    </tr>
+    <tr>
+      <th>2010-09-08</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>9</td>
+      <td>8</td>
+      <td>0.538</td>
+    </tr>
+    <tr>
+      <th>2010-09-09</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>9</td>
+      <td>9</td>
+      <td>0.51</td>
+    </tr>
+    <tr>
+      <th>2010-09-10</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>9</td>
+      <td>10</td>
+      <td>0.554</td>
+    </tr>
+    <tr>
+      <th>2010-09-11</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>9</td>
+      <td>11</td>
+      <td>0.602</td>
+    </tr>
+    <tr>
+      <th>2010-09-12</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>9</td>
+      <td>12</td>
+      <td>1.26</td>
+    </tr>
+    <tr>
+      <th>2010-09-13</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>9</td>
+      <td>13</td>
+      <td>1.1</td>
+    </tr>
+    <tr>
+      <th>2010-09-14</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>9</td>
+      <td>14</td>
+      <td>0.801</td>
+    </tr>
+    <tr>
+      <th>2010-09-15</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>9</td>
+      <td>15</td>
+      <td>0.708</td>
+    </tr>
+    <tr>
+      <th>2010-09-16</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>9</td>
+      <td>16</td>
+      <td>0.719</td>
+    </tr>
+    <tr>
+      <th>2010-09-17</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>9</td>
+      <td>17</td>
+      <td>0.666</td>
+    </tr>
+    <tr>
+      <th>2010-09-18</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>9</td>
+      <td>18</td>
+      <td>0.757</td>
+    </tr>
+    <tr>
+      <th>2010-09-19</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>9</td>
+      <td>19</td>
+      <td>1.81</td>
+    </tr>
+    <tr>
+      <th>2010-09-20</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>9</td>
+      <td>20</td>
+      <td>2.7</td>
+    </tr>
+    <tr>
+      <th>2010-09-21</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>9</td>
+      <td>21</td>
+      <td>1.71</td>
+    </tr>
+    <tr>
+      <th>2010-09-22</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>9</td>
+      <td>22</td>
+      <td>1.09</td>
+    </tr>
+    <tr>
+      <th>2010-09-23</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>9</td>
+      <td>23</td>
+      <td>0.992</td>
+    </tr>
+    <tr>
+      <th>2010-09-24</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>9</td>
+      <td>24</td>
+      <td>1.47</td>
+    </tr>
+    <tr>
+      <th>2010-09-25</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>9</td>
+      <td>25</td>
+      <td>1.26</td>
+    </tr>
+    <tr>
+      <th>2010-09-26</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>9</td>
+      <td>26</td>
+      <td>2.76</td>
+    </tr>
+    <tr>
+      <th>2010-09-27</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>9</td>
+      <td>27</td>
+      <td>2.32</td>
+    </tr>
+    <tr>
+      <th>2010-09-28</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>9</td>
+      <td>28</td>
+      <td>2.8</td>
+    </tr>
+    <tr>
+      <th>2010-09-29</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>9</td>
+      <td>29</td>
+      <td>1.68</td>
+    </tr>
+    <tr>
+      <th>2010-09-30</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>9</td>
+      <td>30</td>
+      <td>1.22</td>
+    </tr>
+    <tr>
+      <th>2010-10-01</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>10</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2010-10-02</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>10</td>
+      <td>2</td>
+      <td>0.865</td>
+    </tr>
+    <tr>
+      <th>2010-10-03</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>10</td>
+      <td>3</td>
+      <td>0.75</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># let&#39;s store the stage label as a variable for convenience</span>
+<span class="c1">#stage_label = &#39;Water level (daily av.) (m)&#39;</span>
+<span class="n">stage_label</span> <span class="o">=</span> <span class="s1">&#39;Value&#39;</span>
+<span class="c1"># Because of possible NaN entries in the data column, the column may be read as strings instead of floating point numbers (floats)</span>
+<span class="c1">#with the following line we fix that, by forcing the data type to float.</span>
+<span class="n">site_df</span><span class="p">[</span><span class="n">stage_label</span><span class="p">]</span> <span class="o">=</span> <span class="n">site_df</span><span class="p">[</span><span class="n">stage_label</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot the data for a quick visual check</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">site_df</span><span class="o">.</span><span class="n">index</span><span class="p">,</span><span class="n">site_df</span><span class="p">[</span><span class="s1">&#39;Value&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fddc0056e50&gt;]
+</pre></div>
+</div>
+<img alt="../../_images/55b02513c2e26205951a43dedecf9df43750836ff34d745381ed407e4cf9dc0c.png" src="../../_images/55b02513c2e26205951a43dedecf9df43750836ff34d745381ed407e4cf9dc0c.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">site_df</span><span class="p">[</span><span class="s1">&#39;Value&#39;</span><span class="p">][</span><span class="mi">3</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>numpy.float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import the discharge measurements</span>
+<span class="n">rc_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../../notebook_data/notebook_2_data/RC_Data.csv&#39;</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">],</span> <span class="n">na_values</span><span class="o">=</span><span class="s1">&#39;NaN&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># take a look at the discharge measurements</span>
+<span class="n">rc_df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Date</th>
+      <th>Flow (m3/s)</th>
+      <th>Water level (m)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2009-01-02</td>
+      <td>1.565</td>
+      <td>0.236</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2009-01-07</td>
+      <td>1.530</td>
+      <td>0.267</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2009-03-20</td>
+      <td>0.967</td>
+      <td>0.224</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2009-09-12</td>
+      <td>5.133</td>
+      <td>0.707</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2009-11-10</td>
+      <td>3.402</td>
+      <td>0.468</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>2009-11-18</td>
+      <td>4.474</td>
+      <td>0.589</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>2010-03-24</td>
+      <td>1.297</td>
+      <td>0.296</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>2010-03-25</td>
+      <td>1.823</td>
+      <td>0.300</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>2010-08-25</td>
+      <td>4.682</td>
+      <td>0.632</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># remember to add in the newest discharge measurement(s)!</span>
+<span class="n">msmt_date</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="s1">&#39;2010-09-26&#39;</span><span class="p">)</span>
+<span class="n">msmt_q</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="c1"># note that in stage_df, the index has been set to the Date column</span>
+<span class="n">msmt_stage</span> <span class="o">=</span> <span class="n">site_df</span><span class="p">[</span><span class="n">site_df</span><span class="o">.</span><span class="n">index</span> <span class="o">==</span> <span class="n">msmt_date</span><span class="p">][</span><span class="n">stage_label</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># only do this once, or you&#39;ll keep adding rows!</span>
+<span class="n">rc_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">rc_df</span><span class="p">)]</span> <span class="o">=</span> <span class="p">[</span><span class="n">msmt_date</span><span class="p">,</span> <span class="n">msmt_q</span><span class="p">,</span> <span class="n">msmt_stage</span><span class="p">]</span>
+<span class="n">rc_df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Date</th>
+      <th>Flow (m3/s)</th>
+      <th>Water level (m)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2009-01-02</td>
+      <td>1.565</td>
+      <td>0.236</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2009-01-07</td>
+      <td>1.530</td>
+      <td>0.267</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2009-03-20</td>
+      <td>0.967</td>
+      <td>0.224</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2009-09-12</td>
+      <td>5.133</td>
+      <td>0.707</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2009-11-10</td>
+      <td>3.402</td>
+      <td>0.468</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>2009-11-18</td>
+      <td>4.474</td>
+      <td>0.589</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>2010-03-24</td>
+      <td>1.297</td>
+      <td>0.296</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>2010-03-25</td>
+      <td>1.823</td>
+      <td>0.300</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>2010-08-25</td>
+      <td>4.682</td>
+      <td>0.632</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>2010-09-26</td>
+      <td>12.000</td>
+      <td>2.760</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="plot-the-stage-discharge-rating-curve-and-the-best-fit-curve">
+<h2>Plot the Stage-Discharge Rating Curve and the Best Fit Curve<a class="headerlink" href="#plot-the-stage-discharge-rating-curve-and-the-best-fit-curve" title="Permalink to this heading">#</a></h2>
+<p>Recall the form of the rating curve equation from Notebook 2: <span class="math notranslate nohighlight">\(Q = C(H-h_0)^b\)</span>.  If we transform the data to log space, we get a linear relationship:</p>
+<div class="math notranslate nohighlight">
+\[log(Q) = log(C) + b\cdot log(h-h_0)\]</div>
+<p>If we rearrange to the form <span class="math notranslate nohighlight">\(y = intercept + slope \cdot x\)</span>, we can use the scipy function for linear regression (<code class="docutils literal notranslate"><span class="pre">scipy.stats.linregress()</span></code> shortened at import to <code class="docutils literal notranslate"><span class="pre">st.linregress()</span></code> from the previous tutorial).</p>
+<p>Recall the x and y axis parameters are Q and h, respectively, so the linear form of the equation is then:</p>
+<div class="math notranslate nohighlight">
+\[log(h-h_0) = slope \cdot log(Q) + intercept\]</div>
+<p>The above relationship is linear, so we can use ordinary least squares to find the best fit line (in log-log space), and then transform back to linear space.
+Note that <span class="math notranslate nohighlight">\(h_0\)</span> cannot be fitted this way, and has to be set manually. In this case we will use <span class="math notranslate nohighlight">\(h_0=0\)</span> as a first approximation and check the fit to see if an adjustment is warranted.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># calculate the discharge based on the best fit</span>
+<span class="c1"># parameters found by ordinary least squares above</span>
+<span class="k">def</span> <span class="nf">ols_rc_q</span><span class="p">(</span><span class="n">slope</span><span class="p">,</span> <span class="n">intercept</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">h0</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculate flow (Q) from the linear best fit parameters.</span>
+<span class="sd">        -slope: the `log_slope` calculated above (constant)</span>
+<span class="sd">        -intercept: `log_intercept` calculated above (constant)</span>
+<span class="sd">        -h0 is the same PZF offset used above (constant)</span>
+<span class="sd">        -h is the independent variable</span>
+<span class="sd">    Returns Q, the discharge in m^3/s.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">slope</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">h</span> <span class="o">-</span> <span class="n">h0</span><span class="p">)</span> <span class="o">-</span> <span class="n">intercept</span><span class="p">)</span> <span class="o">/</span> <span class="n">slope</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span> 
+        <span class="k">return</span> <span class="kc">None</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Find the best-fit line in log-log space</span>
+<span class="c1"># take the logarithm of the measured streamflows and stage</span>
+<span class="n">h0</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">q_log</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">rc_df</span><span class="p">[</span><span class="s1">&#39;Flow (m3/s)&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">h0</span><span class="p">)</span>
+<span class="n">stage_log</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">rc_df</span><span class="p">[</span><span class="s1">&#39;Water level (m)&#39;</span><span class="p">])</span>
+
+<span class="c1"># find the parameters describing the linear best fit using ordinary least squares (OLS)</span>
+<span class="n">log_slope</span><span class="p">,</span> <span class="n">log_intercept</span><span class="p">,</span> <span class="n">log_rval</span><span class="p">,</span> <span class="n">log_pval</span><span class="p">,</span> <span class="n">log_stderr</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">linregress</span><span class="p">(</span><span class="n">q_log</span><span class="p">,</span> <span class="n">stage_log</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stage_range</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.001</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="c1"># put best fit results into a dataframe for plotting</span>
+<span class="c1"># use 0 as the PZF (point of zero flow) (the h0 parameter)</span>
+<span class="n">bf_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+<span class="n">bf_df</span><span class="p">[</span><span class="s1">&#39;stage&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">stage_range</span>
+
+<span class="c1"># now as before, apply the `ols_rc_q` function to create the stage-discharge</span>
+<span class="c1"># curve based on the best-fit equation</span>
+<span class="n">bf_df</span><span class="p">[</span><span class="s1">&#39;best_fit_q&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">ols_rc_q</span><span class="p">(</span><span class="n">log_slope</span><span class="p">,</span> <span class="n">log_intercept</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span> <span class="k">for</span> <span class="n">h</span> <span class="ow">in</span> <span class="n">stage_range</span><span class="p">]</span>
+<span class="n">bf_df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;stage&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="calculate-daily-average-discharge">
+<h2>Calculate Daily Average Discharge<a class="headerlink" href="#calculate-daily-average-discharge" title="Permalink to this heading">#</a></h2>
+<p>From the equation describing the ordinary least squares (OLS) best fit of the measured discharge,
+calculate daily average flow from daily average water level.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">site_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ID</th>
+      <th>PARAM</th>
+      <th>year</th>
+      <th>month</th>
+      <th>day</th>
+      <th>Value</th>
+    </tr>
+    <tr>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2010-08-25</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>8</td>
+      <td>25</td>
+      <td>0.749</td>
+    </tr>
+    <tr>
+      <th>2010-08-26</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>8</td>
+      <td>26</td>
+      <td>0.794</td>
+    </tr>
+    <tr>
+      <th>2010-08-27</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>8</td>
+      <td>27</td>
+      <td>1.070</td>
+    </tr>
+    <tr>
+      <th>2010-08-28</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>8</td>
+      <td>28</td>
+      <td>0.786</td>
+    </tr>
+    <tr>
+      <th>2010-08-29</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>8</td>
+      <td>29</td>
+      <td>0.635</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># here we apply the rating curve equation function to the entire </span>
+<span class="c1"># water level time series</span>
+<span class="n">site_df</span><span class="p">[</span><span class="s1">&#39;RC Q (cms)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">site_df</span><span class="p">[</span><span class="n">stage_label</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">h</span><span class="p">:</span> <span class="n">ols_rc_q</span><span class="p">(</span><span class="n">log_slope</span><span class="p">,</span> <span class="n">log_intercept</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">site_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ID</th>
+      <th>PARAM</th>
+      <th>year</th>
+      <th>month</th>
+      <th>day</th>
+      <th>Value</th>
+      <th>RC Q (cms)</th>
+    </tr>
+    <tr>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2010-08-25</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>8</td>
+      <td>25</td>
+      <td>0.749</td>
+      <td>4.660042</td>
+    </tr>
+    <tr>
+      <th>2010-08-26</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>8</td>
+      <td>26</td>
+      <td>0.794</td>
+      <td>4.965673</td>
+    </tr>
+    <tr>
+      <th>2010-08-27</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>8</td>
+      <td>27</td>
+      <td>1.070</td>
+      <td>6.871380</td>
+    </tr>
+    <tr>
+      <th>2010-08-28</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>8</td>
+      <td>28</td>
+      <td>0.786</td>
+      <td>4.911223</td>
+    </tr>
+    <tr>
+      <th>2010-08-29</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>8</td>
+      <td>29</td>
+      <td>0.635</td>
+      <td>3.893279</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rc_df</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;Date&#39;, &#39;Flow (m3/s)&#39;, &#39;Water level (m)&#39;], dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<section id="plot-the-rating-curve-and-resultant-flow-series">
+<h3>Plot the Rating Curve and Resultant Flow Series<a class="headerlink" href="#plot-the-rating-curve-and-resultant-flow-series" title="Permalink to this heading">#</a></h3>
+<p>The two plots below are linked.  Check the selection tools, and select points on one plot.  When validating data, it is helpful to be able to link the measurements on the rating curve plot and the daily flow series plot.  Consider how you would you check if the low flows were subject to a shift in the hydraulic control over time?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># here we specify 1, 2 for subplots meaning 1 row and 2 columns</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+
+<span class="c1"># left side plot - rating curve</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">bf_df</span><span class="p">[</span><span class="s1">&#39;best_fit_q&#39;</span><span class="p">],</span> <span class="n">bf_df</span><span class="p">[</span><span class="s1">&#39;stage&#39;</span><span class="p">],</span>
+        <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;OLS Best Fit&quot;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rc_df</span><span class="p">[</span><span class="s1">&#39;Flow (m3/s)&#39;</span><span class="p">],</span> <span class="n">rc_df</span><span class="p">[</span><span class="s1">&#39;Water level (m)&#39;</span><span class="p">],</span> 
+           <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span>
+           <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+           <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Discharge measurements&#39;</span><span class="p">)</span>
+
+<span class="c1"># right side plot -- hydrograph</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">site_df</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">site_df</span><span class="p">[</span><span class="s1">&#39;RC Q (cms)&#39;</span><span class="p">],</span>
+        <span class="n">color</span><span class="o">=</span><span class="s1">&#39;dodgerblue&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;OLS Best Fit&quot;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rc_df</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">],</span> <span class="n">rc_df</span><span class="p">[</span><span class="s1">&#39;Flow (m3/s)&#39;</span><span class="p">],</span> 
+           <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span>
+           <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+           <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Discharge measurements&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Stage - Discharge Rating Curve&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Discharge [m^3/s]&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Stage [m]&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="c1"># right side plot labels</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Measured Discharge Hydrograph&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Date&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Discharge [m^3/s]&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/68005eb5d493039ef249e2947860a7063d403ca2af05896345bb663eeda5e1d5.png" src="../../_images/68005eb5d493039ef249e2947860a7063d403ca2af05896345bb663eeda5e1d5.png" />
+</div>
+</div>
+</section>
+<section id="cumulative-frequency-the-flow-duration-curve-fdc">
+<h3>Cumulative Frequency: The Flow Duration Curve (FDC)<a class="headerlink" href="#cumulative-frequency-the-flow-duration-curve-fdc" title="Permalink to this heading">#</a></h3>
+<p>In order to illustrate the variability of flow in a river, it is common to map flow magnitude to cumulative frequency, or the proportion of time the flow in the river equals or exceeds some amount.  A flow duration curve presents flow magnitude from 0% to 100% exceedance, where values approaching zero are high flows that are very rarely exceeded.  Conversely, values approaching 100% exceedance are low flows that are almost always exceeded.  <strong>50% exceedance represents the median flow</strong>  Note that these values are based on the sample, and the flow duration curve is generally used to describe the overall distribution of flow and not for estimating extremes.  A <em>flow duration</em> curve is also referred to as a <em>flow exceedance</em> curve.</p>
+<p>Let’s plot a flow duration curve for the measured flow series we created above by applying the rating curve equation to the stage series.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+
+<span class="n">pct_exceeded</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+<span class="n">flow_quantiles</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">site_df</span><span class="p">[</span><span class="s1">&#39;RC Q (cms)&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">(),</span> <span class="n">pct_exceeded</span><span class="p">)</span>
+
+<span class="n">start_date</span><span class="p">,</span> <span class="n">end_date</span> <span class="o">=</span> <span class="n">site_df</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">site_df</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pct_exceeded</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">flow_quantiles</span><span class="p">,</span> <span class="s1">&#39;b-&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Flow Exceedance Curve (Measured Data: </span><span class="si">{</span><span class="n">start_date</span><span class="si">:</span><span class="s1">%Y-%m-%d</span><span class="si">}</span><span class="s1"> to </span><span class="si">{</span><span class="n">end_date</span><span class="si">:</span><span class="s1">%Y-%m-%d</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Flow [m^3/s]&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Percent of Time Exceeded [%]&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0, &#39;Percent of Time Exceeded [%]&#39;)
+</pre></div>
+</div>
+<img alt="../../_images/217090143768748425063c23de4a9a66e02df13b107d7de93138fe8868270baf.png" src="../../_images/217090143768748425063c23de4a9a66e02df13b107d7de93138fe8868270baf.png" />
+</div>
+</div>
+<p>The shape of the FDC gives some insight into the fluctuation of flows in the watershed.  A steeper peak flow end suggests more dramatic ‘flashes’ of rainfall-runoff response.  The shape of the low-flow tail describes base flows during low flow seasons.  Below is a comparison of two basins of nearly identical size but in very different climates:</p>
+<p><img alt="Comparison of flow exceedance curves for two basins in BC and Alberta." src="../../_images/FDC_comparison1.png" /></p>
+<p>From the plot above, the Alberta basin looks to be a bit bit drier, but a dramatic difference in low-flows can be seen by looking closer at the low-flow range:</p>
+<p><img alt="Comparison of flow exceedance curves for two basins in BC and Alberta, with a focus on low-flow range." src="../../_images/FDC_comparison_low_flow1.png" /></p>
+<p>An FDC is also informative to compare <strong>different estimates at the same location</strong>, such as a measured vs. modeled flow series.</p>
+<p>Next we’ll develop a regional regression model and then use the FDC to evaluate the quality of our model <em>over specific flow quantiles</em> – this is important for the different end-uses of the data.</p>
+</section>
+</section>
+<section id="linear-regression-of-daily-streamflow">
+<h2>Linear Regression of Daily Streamflow<a class="headerlink" href="#linear-regression-of-daily-streamflow" title="Permalink to this heading">#</a></h2>
+<p><img alt="Active WSC Stations in Western Canada" src="../../_images/wsc_map_view1.png" /></p>
+<p>Water Survey of Canada (WSC) has operated and maintained hydrometric stations across Canada for over 100 years.  If we can find a regional proxy WSC station in <strong>close proximity to our location of interest, with similar basin characteristics</strong> to those of our project, we can correlate daily streamflow between the two locations, ultimately to generate an estimated (also called synthetic or modeled) long-term flow series for our project location.</p>
+<p>Typically regressions are done by chronological pairing, which effectively says “if the flow at the regional (proxy) station was <span class="math notranslate nohighlight">\(Q_p\)</span> at time <span class="math notranslate nohighlight">\(t\)</span>, the flow at our project location at time <span class="math notranslate nohighlight">\(t\)</span> will be approximately linearly proportional.</p>
+<section id="chronological-pairing-cp">
+<h3>Chronological Pairing (CP)<a class="headerlink" href="#chronological-pairing-cp" title="Permalink to this heading">#</a></h3>
+<p>A lot of work goes into finding an appropriate long-term record comparable to our location of interest, but we will assume we have been given a long-term daily flow series to use.</p>
+<ol class="arabic simple">
+<li><p>Find just the concurrent days of record (days where we have flow recorded at <strong>both creeks/rivers</strong>).</p></li>
+<li><p>Create a scatter plot where the x, y coordinates of each data point are (flow1, flow2).  It is customary to put the long-term regional station on the x-axis.</p></li>
+<li><p>Determine the equation describing the line of best fit through the data.</p></li>
+<li><p>Apply the best fit line equation to the long-term surrogate record to yield an estimated long-term series for the project location.</p></li>
+</ol>
+<p>To further refine this estimate, we can recognize that the mechanisms driving flow across seasons and months can change quite dramatically, and the relationship between the two catchments can also change month-by-month, and/or season by season.  If there is enough data to create seasonal or monthly regressions, we can develop a best-fit equation for each month or season.  The process of steps 2 through 4 then are the same, except we treat each season or month independently.</p>
+<p>The above method is referred to as <strong>chronological pairing (CP)</strong>, as it pairs flows occurring at the same time.  But what if there are timing differences between stations, or what if the spatial variability of precipitation results in flow events that don’t coincide in the short term?</p>
+</section>
+<section id="empirical-frequency-pairing">
+<h3>Empirical Frequency Pairing<a class="headerlink" href="#empirical-frequency-pairing" title="Permalink to this heading">#</a></h3>
+<p>To eliminate the temporal constraint on timing of events at the daily level, instead of comparing concurrent days, we can compare magnitudes of flows. This method is referred to as Empirical Frequency Pairing (EFP) and is commonly used in British Columbia.  Empirical frequency pairing still uses concurrent records, however it is the ranked flows in each series that are compared, i.e. the data points on an EFP plot are:</p>
+<div class="math notranslate nohighlight">
+\[[(R1_{siteA}, R1_{site_B}), (R2_{siteA}, R2_{siteB}), ..., (Rn_{siteA}, Rn_{siteB})]\]</div>
+<p>The steps to derive an estimated long-term flow series for our location of interest are the same (i.e. steps 2-4 above).</p>
+</section>
+<section id="set-up-a-chronological-pairing-regression">
+<h3>Set up a Chronological Pairing Regression<a class="headerlink" href="#set-up-a-chronological-pairing-regression" title="Permalink to this heading">#</a></h3>
+<p>The first step is to import the regional data series and find all of the dates with values for both locations.</p>
+<p>Previewing the data shows line 1 has information about two distinct parameters.  Where the <code class="docutils literal notranslate"><span class="pre">PARAM</span></code> column value is 1, the <code class="docutils literal notranslate"><span class="pre">Value</span></code> column corresponds to daily discharge (<span class="math notranslate nohighlight">\(\frac{m^3}{s}\)</span> and where the <code class="docutils literal notranslate"><span class="pre">PARAM</span></code> column value is 2, the <code class="docutils literal notranslate"><span class="pre">Value</span></code> column corresonds to daily water level (<span class="math notranslate nohighlight">\(m\)</span>).</p>
+<blockquote>
+<div><p><strong>Note</strong>: At the point of data import, we also need to correctly set the header line to index 1 (the second row), because the file has a row of information describing the PARAM values above the actual column header row.  See for yourself by opening up the csv file.</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># set the header row to index 1, tell the function to set the </span>
+<span class="c1"># `Date` column as the index.</span>
+<span class="n">regional_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../../notebook_data/notebook_3_data/Regional_data.csv&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="s1">&#39;Date&#39;</span><span class="p">)</span>
+
+<span class="c1"># filter for only the discharge data (PARAM == 1)</span>
+<span class="n">regional_df</span> <span class="o">=</span> <span class="n">regional_df</span><span class="p">[</span><span class="n">regional_df</span><span class="p">[</span><span class="s1">&#39;PARAM&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span>
+ 
+<span class="c1"># preview the data</span>
+<span class="n">regional_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>PARAM</th>
+      <th>Value</th>
+      <th>SYM</th>
+    </tr>
+    <tr>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1987-01-26</th>
+      <td>1</td>
+      <td>0.283</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <th>1987-01-27</th>
+      <td>1</td>
+      <td>0.240</td>
+      <td>B</td>
+    </tr>
+    <tr>
+      <th>1987-01-28</th>
+      <td>1</td>
+      <td>0.240</td>
+      <td>B</td>
+    </tr>
+    <tr>
+      <th>1987-01-29</th>
+      <td>1</td>
+      <td>0.273</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1987-01-30</th>
+      <td>1</td>
+      <td>0.255</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># check the date range covered by the regional data</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Period of Record:&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;    Regional data: </span><span class="si">{</span><span class="n">regional_df</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s1">%Y-%m-%d</span><span class="si">}</span><span class="s1"> to </span><span class="si">{</span><span class="n">regional_df</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s1">%Y-%m-%d</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># check the date range covered by our data measured at site</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;        Site data: </span><span class="si">{</span><span class="n">site_df</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s1">%Y-%m-%d</span><span class="si">}</span><span class="s1"> to </span><span class="si">{</span><span class="n">site_df</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s1">%Y-%m-%d</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Period of Record:
+    Regional data: 1987-01-26 to 2017-12-31
+        Site data: 2010-08-25 to 2012-07-01
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="obtain-concurrent-data">
+<h3>Obtain Concurrent Data<a class="headerlink" href="#obtain-concurrent-data" title="Permalink to this heading">#</a></h3>
+<p>From the previous step, we can see that the regional dataset encompasses the date range of our site data.  To perform a linear regression, we want to use <strong>concurrent data only</strong>.   The <code class="docutils literal notranslate"><span class="pre">concat</span></code>, or concatenate, function <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.concat.html">documentation can be found here</a>.</p>
+<blockquote>
+<div><p><strong>Note</strong>: the <code class="docutils literal notranslate"><span class="pre">concat</span></code> function is used to combine dataframes.  We want to combine two dataframes based on concurrent days.  The <code class="docutils literal notranslate"><span class="pre">concat</span></code> function requires the dataframes to have <code class="docutils literal notranslate"><span class="pre">datetime</span></code>/<code class="docutils literal notranslate"><span class="pre">timestamp</span></code> type indices.</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">site_df</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">regional_df</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas._libs.tslibs.timestamps.Timestamp&#39;&gt;
+&lt;class &#39;pandas._libs.tslibs.timestamps.Timestamp&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Above we can see that both dataframe indices are <code class="docutils literal notranslate"><span class="pre">timestamp</span></code> types.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create a new dataframe of concurrent data and plot the data</span>
+<span class="c1"># join=&#39;inner&#39; says to line up the indices and get the </span>
+<span class="c1"># values that are common between the two dataframes</span>
+<span class="c1"># axis=1 says line up columns instead of rows</span>
+<span class="n">concurrent_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">site_df</span><span class="p">,</span> <span class="n">regional_df</span><span class="p">],</span> <span class="n">join</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">concurrent_df</span> <span class="o">=</span> <span class="n">concurrent_df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Value&#39;</span><span class="p">,</span><span class="s1">&#39;RC Q (cms)&#39;</span><span class="p">],</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;any&#39;</span><span class="p">)</span>
+<span class="n">concurrent_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ID</th>
+      <th>PARAM</th>
+      <th>year</th>
+      <th>month</th>
+      <th>day</th>
+      <th>Value</th>
+      <th>RC Q (cms)</th>
+      <th>PARAM</th>
+      <th>Value</th>
+      <th>SYM</th>
+    </tr>
+    <tr>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2010-08-25</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>8</td>
+      <td>25</td>
+      <td>0.749</td>
+      <td>4.660042</td>
+      <td>1</td>
+      <td>1.930</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2010-08-26</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>8</td>
+      <td>26</td>
+      <td>0.794</td>
+      <td>4.965673</td>
+      <td>1</td>
+      <td>1.910</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2010-08-27</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>8</td>
+      <td>27</td>
+      <td>1.070</td>
+      <td>6.871380</td>
+      <td>1</td>
+      <td>1.410</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2010-08-28</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>8</td>
+      <td>28</td>
+      <td>0.786</td>
+      <td>4.911223</td>
+      <td>1</td>
+      <td>1.110</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2010-08-29</th>
+      <td>00XX000</td>
+      <td>2</td>
+      <td>2010</td>
+      <td>8</td>
+      <td>29</td>
+      <td>0.635</td>
+      <td>3.893279</td>
+      <td>1</td>
+      <td>0.996</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+</section>
+<section id="regression-plot">
+<h2>Regression Plot<a class="headerlink" href="#regression-plot" title="Permalink to this heading">#</a></h2>
+<p>Plot the concurrent daily flows between the project location and the regional station to see if there is a correlation between the two that could be used to develop a model for our project location.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#### Regression Plot</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">concurrent_df</span><span class="p">[</span><span class="s1">&#39;Value&#39;</span><span class="p">],</span> <span class="n">concurrent_df</span><span class="p">[</span><span class="s1">&#39;RC Q (cms)&#39;</span><span class="p">],</span> <span class="s1">&#39;bo&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Regression Plot (All Concurrent Data)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Site Q [m^3/s]&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Regional Q [m^3/s]&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0, &#39;Regional Q [m^3/s]&#39;)
+</pre></div>
+</div>
+<img alt="../../_images/d304f60931335e8f00a1adb3b7ef47d174d815258b5d8dac9c43db96616af97c.png" src="../../_images/d304f60931335e8f00a1adb3b7ef47d174d815258b5d8dac9c43db96616af97c.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># find the best fit equation</span>
+<span class="n">slope</span><span class="p">,</span> <span class="n">intercept</span><span class="p">,</span> <span class="n">rval</span><span class="p">,</span> <span class="n">pval</span><span class="p">,</span> <span class="n">stderr</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">linregress</span><span class="p">(</span><span class="n">concurrent_df</span><span class="p">[</span><span class="s1">&#39;Value&#39;</span><span class="p">],</span> <span class="n">concurrent_df</span><span class="p">[</span><span class="s1">&#39;RC Q (cms)&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">25</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># find the best fit equation</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">slope</span><span class="p">,</span> <span class="n">intercept</span><span class="p">,</span> <span class="n">rval</span><span class="p">,</span> <span class="n">pval</span><span class="p">,</span> <span class="n">stderr</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">linregress</span><span class="p">(</span><span class="n">concurrent_df</span><span class="p">[</span><span class="s1">&#39;Value&#39;</span><span class="p">],</span> <span class="n">concurrent_df</span><span class="p">[</span><span class="s1">&#39;RC Q (cms)&#39;</span><span class="p">])</span>
+
+<span class="nn">File ~/anaconda3/lib/python3.8/site-packages/scipy/stats/_stats_mstats_common.py:167,</span> in <span class="ni">linregress</span><span class="nt">(x, y, alternative)</span>
+<span class="g g-Whitespace">    </span><span class="mi">162</span> <span class="n">ymean</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">164</span> <span class="c1"># Average sums of square differences from the mean</span>
+<span class="g g-Whitespace">    </span><span class="mi">165</span> <span class="c1">#   ssxm = mean( (x-mean(x))^2 )</span>
+<span class="g g-Whitespace">    </span><span class="mi">166</span> <span class="c1">#   ssxym = mean( (x-mean(x)) * (y-mean(y)) )</span>
+<span class="ne">--&gt; </span><span class="mi">167</span> <span class="n">ssxm</span><span class="p">,</span> <span class="n">ssxym</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">ssym</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cov</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">flat</span>
+<span class="g g-Whitespace">    </span><span class="mi">169</span> <span class="c1"># R-value</span>
+<span class="g g-Whitespace">    </span><span class="mi">170</span> <span class="c1">#   r = ssxym / sqrt( ssxm * ssym )</span>
+<span class="g g-Whitespace">    </span><span class="mi">171</span> <span class="k">if</span> <span class="n">ssxm</span> <span class="o">==</span> <span class="mf">0.0</span> <span class="ow">or</span> <span class="n">ssym</span> <span class="o">==</span> <span class="mf">0.0</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">172</span>     <span class="c1"># If the denominator was going to be 0</span>
+
+<span class="nn">File &lt;__array_function__ internals&gt;:200,</span> in <span class="ni">cov</span><span class="nt">(*args, **kwargs)</span>
+
+<span class="nn">File ~/anaconda3/lib/python3.8/site-packages/numpy/lib/function_base.py:2640,</span> in <span class="ni">cov</span><span class="nt">(m, y, rowvar, bias, ddof, fweights, aweights, dtype)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2638</span>     <span class="k">if</span> <span class="ow">not</span> <span class="n">rowvar</span> <span class="ow">and</span> <span class="n">y</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">2639</span>         <span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="o">.</span><span class="n">T</span>
+<span class="ne">-&gt; </span><span class="mi">2640</span>     <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2642</span> <span class="k">if</span> <span class="n">ddof</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">2643</span>     <span class="k">if</span> <span class="n">bias</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+
+<span class="nn">File &lt;__array_function__ internals&gt;:200,</span> in <span class="ni">concatenate</span><span class="nt">(*args, **kwargs)</span>
+
+<span class="ne">ValueError</span>: all the input array dimensions except for the concatenation axis must match exactly, but along dimension 1, the array at index 0 has size 2 and the array at index 1 has size 590
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sign</span> <span class="o">=</span> <span class="s1">&#39;+&#39;</span>
+<span class="k">if</span> <span class="n">intercept</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">sign</span> <span class="o">=</span> <span class="s1">&#39;-&#39;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Regression Equation:&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;    Q_site = </span><span class="si">{</span><span class="n">slope</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1">xQ_regional </span><span class="si">{</span><span class="n">sign</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">intercept</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Add the best fit line (regression model) to the plot.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x_range</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">concurrent_df</span><span class="p">[</span><span class="s1">&#39;Value&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="n">model_q</span> <span class="o">=</span> <span class="p">[</span><span class="n">slope</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="n">intercept</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">x_range</span><span class="p">]</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">concurrent_df</span><span class="p">[</span><span class="s1">&#39;Value&#39;</span><span class="p">],</span> <span class="n">concurrent_df</span><span class="p">[</span><span class="s1">&#39;RC Q (cms)&#39;</span><span class="p">],</span> <span class="s1">&#39;bo&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Regression Model: Q_site = </span><span class="si">{</span><span class="n">slope</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1">*Q_regional </span><span class="si">{</span><span class="n">sign</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">intercept</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Site Q [m^3/s]&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Regional Q [m^3/s]&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_range</span><span class="p">,</span> <span class="n">model_q</span><span class="p">,</span> <span class="s1">&#39;r--&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="create-long-term-daily-flow-series-for-the-project-location">
+<h2>Create long-term daily flow series for the project location<a class="headerlink" href="#create-long-term-daily-flow-series-for-the-project-location" title="Permalink to this heading">#</a></h2>
+<p>The last step in the process of a long-term flow estimate for our project location is to use the equation of the best fit line (the model) to calculate estimated daily flows over periods where flow was not measured at our project location.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">regional_df</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># map the equation of the best fit line to the regional flow series</span>
+<span class="c1"># to get the long-term modeled flow series for the project location</span>
+<span class="n">regional_df</span><span class="p">[</span><span class="s1">&#39;Model_q_cms&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">regional_df</span><span class="p">[</span><span class="s1">&#39;Value&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">q</span><span class="p">:</span> <span class="n">slope</span> <span class="o">*</span> <span class="n">q</span> <span class="o">+</span> <span class="n">intercept</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">regional_df</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="compare-the-model-flow-series-to-the-measured-series">
+<h2>Compare the model flow series to the measured series<a class="headerlink" href="#compare-the-model-flow-series-to-the-measured-series" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># compare the modeled vs. measured flow series </span>
+<span class="c1"># </span>
+<span class="n">concurrent_df</span><span class="p">[</span><span class="s1">&#39;Model_q_cms&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">concurrent_df</span><span class="p">[</span><span class="s1">&#39;Value&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">q</span><span class="p">:</span> <span class="n">slope</span> <span class="o">*</span> <span class="n">q</span> <span class="o">+</span> <span class="n">intercept</span><span class="p">)</span>
+<span class="n">concurrent_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">concurrent_df</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">concurrent_df</span><span class="p">[</span><span class="s1">&#39;RC Q (cms)&#39;</span><span class="p">],</span> <span class="s1">&#39;g-&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Measured Q&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">concurrent_df</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">concurrent_df</span><span class="p">[</span><span class="s1">&#39;Model_q_cms&#39;</span><span class="p">],</span> <span class="s1">&#39;b-&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Model Q&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Measured vs. Modeled Daily Avg. Flow&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Date&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Flow [cms]&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="in-the-above-plot-note-general-patterns-specific-exceptions-and-any-trends">
+<h3>In the above plot, note general patterns, specific exceptions, and any trends<a class="headerlink" href="#in-the-above-plot-note-general-patterns-specific-exceptions-and-any-trends" title="Permalink to this heading">#</a></h3>
+<p>Note the big deviation between the two series in the summer of 2010.  This looks like our model is doing a particularly bad job in the late summer.  How about in other seasons?   How is the model doing at predicting peaks?</p>
+<blockquote>
+<div><p><strong>Note</strong>: in the figure above, we label one series as “Measured Q” but in reality recall it is not <em>directly</em> measured.  It is itself a model of the relationship between stage and discharge.  <strong>The rating curve equation is the model!</strong></p>
+</div></blockquote>
+</section>
+<section id="best-fit">
+<h3>Best-fit<a class="headerlink" href="#best-fit" title="Permalink to this heading">#</a></h3>
+<p>The least-squares best fit is a common way to define the linear relationship between two variables.  It is a minimization of the sum of squared differences between the line (the model) and the observation.  Because it uses the square difference, it is sensitive to outliers.  It is good practice to check the residuals of the model to see if our model contains bias, and make an adjustment if warranted.  We can exclude outliers from the best fit (but still show them in the plot!), or we could use the L1-norm, which is the sum of absolute differences which is more robust to outliers.</p>
+<p>Below, we’ll apply the best fit model to the regional data for the period of measured record, we’ll calculate the difference (residuals) between modeled and measured flows, and then we’ll plot these residuals to look for bias in our model.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create a series to represent the modeled flow </span>
+<span class="n">concurrent_df</span><span class="p">[</span><span class="s1">&#39;Model_Q&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">concurrent_df</span><span class="p">[</span><span class="s1">&#39;Value&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">slope</span> <span class="o">+</span> <span class="n">intercept</span>
+
+<span class="c1"># find the residuals</span>
+<span class="n">concurrent_df</span><span class="p">[</span><span class="s1">&#39;residuals&#39;</span><span class="p">]</span> <span class="o">=</span>  <span class="n">concurrent_df</span><span class="p">[</span><span class="s1">&#39;Model_Q&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">concurrent_df</span><span class="p">[</span><span class="s1">&#39;RC Q (cms)&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+
+<span class="n">sorted_df</span> <span class="o">=</span> <span class="n">concurrent_df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;Model_Q&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">sorted_df</span><span class="p">[</span><span class="s1">&#39;Model_Q&#39;</span><span class="p">],</span> <span class="n">sorted_df</span><span class="p">[</span><span class="s1">&#39;residuals&#39;</span><span class="p">],</span> <span class="s1">&#39;bo&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">sorted_df</span><span class="p">[</span><span class="s1">&#39;Model_Q&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">sorted_df</span><span class="p">[</span><span class="s1">&#39;Model_Q&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;r--&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Regression Model Residuals&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Measured - Modeled Flow [cms]&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Measured Flow&#39;</span><span class="p">)</span>
+
+<span class="c1"># plot a histogram of the residuals to assess the distribution of error</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">sorted_df</span><span class="p">[</span><span class="s1">&#39;residuals&#39;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span> 
+<span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;horizontal&#39;</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Histogram of Residuals&#39;</span><span class="p">)</span>
+
+<span class="c1"># toggle the line below to see a closeup around 0</span>
+<span class="c1"># ax[1].set_ylim(-1.5, 1.5)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="compare-measured-vs-modeled-flow-duration-curves">
+<h3>Compare measured vs. modeled flow duration curves<a class="headerlink" href="#compare-measured-vs-modeled-flow-duration-curves" title="Permalink to this heading">#</a></h3>
+<p>How else can we evaluate how the model is fitting the measured data, noting in particular that we are interested in certain ranges of flows, perhaps for generating energy year-round, or supplying a community with drinking water in a dry season?</p>
+<p>Recall how we plotted the flow duration curve in Notebook 3.  The flow duration curve is particularly useful for focusing on how well the model matches measured data across the range of flows (though extremes are de-emphasized).</p>
+<p>What do the differences between flow duration curves shown below suggest about how well our model represents the project area?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+
+<span class="n">pct_exceeded</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+<span class="n">msd_flow_quantiles</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">concurrent_df</span><span class="p">[</span><span class="s1">&#39;RC Q (cms)&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">(),</span> <span class="n">pct_exceeded</span><span class="p">)</span>
+<span class="n">model_flow_quantiles</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">concurrent_df</span><span class="p">[</span><span class="s1">&#39;Model_q_cms&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">(),</span> <span class="n">pct_exceeded</span><span class="p">)</span>
+
+<span class="n">start_date</span><span class="p">,</span> <span class="n">end_date</span> <span class="o">=</span> <span class="n">concurrent_df</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">concurrent_df</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="c1">#plot the measured series FDC</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pct_exceeded</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">msd_flow_quantiles</span><span class="p">,</span> <span class="s1">&#39;b-&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Measured&#39;</span><span class="p">)</span>
+<span class="c1">#plot the measured series FDC</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pct_exceeded</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">model_flow_quantiles</span><span class="p">,</span> <span class="s1">&#39;r-&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Modeled&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Flow Exceedance Curve (</span><span class="si">{</span><span class="n">start_date</span><span class="si">:</span><span class="s1">%Y-%m-%d</span><span class="si">}</span><span class="s1"> to </span><span class="si">{</span><span class="n">end_date</span><span class="si">:</span><span class="s1">%Y-%m-%d</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Flow [m^3/s]&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Percent of Time Exceeded [%]&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="estimate-the-long-term-mean-annual-flow-for-our-project-location">
+<h2>Estimate the Long-Term Mean Annual Flow for our Project Location<a class="headerlink" href="#estimate-the-long-term-mean-annual-flow-for-our-project-location" title="Permalink to this heading">#</a></h2>
+<p>Compare the long term mean annual against the short term, then compare the long-term monthly and annual series.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">regional_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># first drop any NaN values so we can calculate mean and percentile values</span>
+<span class="n">regional_df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Model_q_cms&#39;</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">lt_mad</span> <span class="o">=</span> <span class="n">regional_df</span><span class="p">[[</span><span class="s1">&#39;Model_q_cms&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">msd_mean</span> <span class="o">=</span> <span class="n">site_df</span><span class="p">[[</span><span class="s1">&#39;RC Q (cms)&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="n">lt_median</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">regional_df</span><span class="p">[</span><span class="s1">&#39;Model_q_cms&#39;</span><span class="p">],</span> <span class="mi">50</span><span class="p">)</span>
+<span class="n">msd_median</span> <span class="o">=</span> <span class="n">site_df</span><span class="p">[[</span><span class="s1">&#39;RC Q (cms)&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The estimated long-term mean annual flow (MAD) at our project location is </span><span class="si">{</span><span class="n">lt_mad</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1"> m^3/s&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The average flow over the measured period was </span><span class="si">{</span><span class="n">msd_mean</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1"> m^3/s&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The estimated long-term median flow is </span><span class="si">{</span><span class="n">lt_median</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1"> m^3/s&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The median flow over the measured period was </span><span class="si">{</span><span class="n">msd_median</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1"> m^3/s&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">regional_df</span><span class="p">[</span><span class="s1">&#39;month&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">regional_df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">month</span>
+<span class="n">annual_series</span> <span class="o">=</span> <span class="n">regional_df</span><span class="p">[[</span><span class="s1">&#39;Model_q_cms&#39;</span><span class="p">,</span> <span class="s1">&#39;month&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;month&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="n">site_df</span><span class="p">[</span><span class="s1">&#39;month&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">site_df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">month</span>
+<span class="n">msd_ann</span> <span class="o">=</span> <span class="n">site_df</span><span class="p">[[</span><span class="s1">&#39;month&#39;</span><span class="p">,</span> <span class="s1">&#39;RC Q (cms)&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;month&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">annual_series</span><span class="p">[</span><span class="s1">&#39;Model_q_cms&#39;</span><span class="p">],</span> <span class="s1">&#39;r-&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;LT Modelled&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">msd_ann</span><span class="p">[</span><span class="s1">&#39;RC Q (cms)&#39;</span><span class="p">],</span> <span class="s1">&#39;b-&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Measured&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Annual Hydrograph&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Month&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Flow [cms]&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The two series above highlight the difference a long-term estimate can make.  If we were to base a model on the short term measured series (blue), we might underestimate the flow available in the winter months (when energy is especially valuable), or overestimate the snowmelt in spring <strong>over the long term</strong>.</p>
+</section>
+<section id="questions-for-reflection">
+<h2>Questions for Reflection<a class="headerlink" href="#questions-for-reflection" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>From our regression plot and from the comparison of measured and estimated daily flow series, what do you think about the quality of our model, i.e. how well does the best fit line approximate the concurrent daily flows (blue dots)?</p></li>
+<li><p>What flow is exceeded 50% OR MORE of the time, how well is this range modelled and what might this flow range be pertinent to for a hydropower project?</p></li>
+<li><p>What could differences in concurrent flows at the two locations be attributable to?</p></li>
+<li><p>How might we modify our model to capture one of the differences you noted in 3?</p></li>
+<li><p>In the last plot, we see that the ~two years of observation have a substantially different annual distribution compared to the long-term estimate.  What might happen if we used the short-term observed series instead of the long-term estimate?</p></li>
+</ol>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>A.S. Hamilton &amp; R.D. Moore (2012). Quantifying Uncertainty in Streamflow Records , Canadian Water Resources Journal / Revue canadienne des ressources hydriques, 37:1, 3-21, DOI: 10.4296/cwrj3701865</p></li>
+<li><p>Environment Canada (2012).  Hydrometric Manual - Data Computations.  Water Survey of Canada, Weather and Environmental Monitoring Directorate.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># EFP</span>
+<span class="kn">from</span> <span class="nn">bokeh.plotting</span> <span class="kn">import</span> <span class="n">figure</span><span class="p">,</span> <span class="n">show</span>
+<span class="kn">from</span> <span class="nn">bokeh.io</span> <span class="kn">import</span> <span class="n">output_notebook</span>
+<span class="n">output_notebook</span><span class="p">()</span>
+
+<span class="c1"># efp_x = concurrent_df</span>
+<span class="n">concurrent_df</span><span class="o">.</span><span class="n">columns</span>
+<span class="n">regional_label</span> <span class="o">=</span> <span class="s1">&#39;Value&#39;</span>
+<span class="n">local_label</span> <span class="o">=</span> <span class="s1">&#39;RC Q (cms)&#39;</span>
+
+<span class="n">efp_x</span> <span class="o">=</span> <span class="n">concurrent_df</span><span class="p">[</span><span class="n">regional_label</span><span class="p">]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span>
+<span class="n">efp_y</span> <span class="o">=</span> <span class="n">concurrent_df</span><span class="p">[</span><span class="n">local_label</span><span class="p">]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># find the best fit equation</span>
+<span class="n">slope</span><span class="p">,</span> <span class="n">intercept</span><span class="p">,</span> <span class="n">rval</span><span class="p">,</span> <span class="n">pval</span><span class="p">,</span> <span class="n">stderr</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">linregress</span><span class="p">(</span><span class="n">efp_x</span><span class="p">,</span> <span class="n">efp_y</span><span class="p">)</span>
+
+<span class="n">bf_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">bf_y</span> <span class="o">=</span> <span class="p">[</span><span class="n">slope</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="n">intercept</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">bf_x</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">figure</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Empirical Frequency Plot&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="n">efp_x</span><span class="p">,</span> <span class="n">efp_y</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">bf_x</span><span class="p">,</span> <span class="n">bf_y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">line_dash</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">,</span> 
+       <span class="n">legend_label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Q_p = </span><span class="si">{</span><span class="n">slope</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">xQ_r + </span><span class="si">{</span><span class="n">intercept</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">axis_label</span> <span class="o">=</span> <span class="s1">&#39;Regional Flow [cms]&#39;</span>
+<span class="n">p</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">axis_label</span> <span class="o">=</span> <span class="s1">&#39;Project Flow [cms]&#39;</span>
+<span class="n">show</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">concurrent_df</span><span class="o">.</span><span class="n">columns</span>
+
+<span class="kn">from</span> <span class="nn">bokeh.plotting</span> <span class="kn">import</span> <span class="n">figure</span><span class="p">,</span> <span class="n">show</span><span class="p">,</span> <span class="n">output_file</span>
+<span class="kn">from</span> <span class="nn">bokeh.models</span> <span class="kn">import</span> <span class="n">ColumnDataSource</span><span class="p">,</span> <span class="n">Band</span>
+<span class="kn">from</span> <span class="nn">bokeh.io</span> <span class="kn">import</span> <span class="n">output_notebook</span>
+<span class="kn">from</span> <span class="nn">bokeh.layouts</span> <span class="kn">import</span> <span class="n">gridplot</span><span class="p">,</span> <span class="n">column</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># customize the tools for interacting with the plot</span>
+<span class="n">TOOLS</span><span class="o">=</span><span class="s2">&quot;pan,box_zoom,wheel_zoom,reset,hover,poly_select,lasso_select,box_select&quot;</span>
+
+<span class="c1"># stage_df = stage_df.reset_index(drop=True)</span>
+<span class="c1"># the Bokeh plotting library uses a &quot;ColumnDataSource&quot; data structure to </span>
+<span class="c1"># link plots and make them more interactive</span>
+<span class="c1"># set data sources for plot linking</span>
+<span class="n">source</span> <span class="o">=</span> <span class="n">ColumnDataSource</span><span class="p">(</span><span class="n">concurrent_df</span><span class="p">)</span>
+<span class="c1"># ts_source = ColumnDataSource(stage_df)</span>
+
+<span class="c1">#### RATING CURVE PLOT (left side)</span>
+<span class="n">reg_plot</span> <span class="o">=</span> <span class="n">figure</span><span class="p">(</span><span class="n">plot_width</span><span class="o">=</span><span class="mi">700</span><span class="p">,</span> <span class="n">plot_height</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span>
+                <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Regression Plot&#39;</span><span class="p">,</span>
+                <span class="n">tools</span><span class="o">=</span><span class="n">TOOLS</span><span class="p">)</span>
+
+<span class="c1"># plot the measured discharge points as circle glyphs</span>
+<span class="n">reg_plot</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="s1">&#39;Value&#39;</span><span class="p">,</span> <span class="s1">&#39;RC Q (cms)&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+              <span class="n">source</span><span class="o">=</span><span class="n">source</span><span class="p">,</span> <span class="n">legend_label</span><span class="o">=</span><span class="s1">&#39;Concurrent Q&#39;</span><span class="p">)</span>
+
+<span class="c1">#### DAILY FLOW SERIES PLOT (right side)</span>
+<span class="c1"># we can use the y_range attribute to link the plot scales</span>
+<span class="n">daily_flow_plot</span> <span class="o">=</span> <span class="n">figure</span><span class="p">(</span><span class="n">plot_width</span><span class="o">=</span><span class="mi">700</span><span class="p">,</span> <span class="n">plot_height</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> 
+                        <span class="n">x_axis_type</span><span class="o">=</span><span class="s1">&#39;datetime&#39;</span><span class="p">,</span> 
+                        <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Daily Flow Hydrograph&#39;</span><span class="p">,</span>
+                        <span class="n">y_range</span><span class="o">=</span><span class="n">reg_plot</span><span class="o">.</span><span class="n">x_range</span><span class="p">)</span>
+
+<span class="c1"># # plot the flow series based on the OLS best fit</span>
+<span class="n">daily_flow_plot</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="s1">&#39;Date&#39;</span><span class="p">,</span> <span class="s1">&#39;RC Q (cms)&#39;</span><span class="p">,</span> 
+                    <span class="n">legend_label</span><span class="o">=</span><span class="s1">&#39;Project Flow&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span>
+                    <span class="n">source</span><span class="o">=</span><span class="n">source</span><span class="p">)</span>
+
+<span class="c1"># plot the flow series based on the manual fit</span>
+<span class="n">daily_flow_plot</span><span class="o">.</span><span class="n">circle</span><span class="p">(</span><span class="s1">&#39;Date&#39;</span><span class="p">,</span> <span class="s1">&#39;Value&#39;</span><span class="p">,</span> 
+                    <span class="n">legend_label</span><span class="o">=</span><span class="s1">&#39;Regional Flow&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;dodgerblue&#39;</span><span class="p">,</span>
+                    <span class="n">source</span><span class="o">=</span><span class="n">source</span><span class="p">)</span>
+
+<span class="c1"># daily_flow_plot.line(&#39;Date&#39;, &#39;RC Q (cms)&#39;)</span>
+<span class="c1"># label the axes</span>
+<span class="n">daily_flow_plot</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">axis_label</span> <span class="o">=</span> <span class="s1">&#39;Date&#39;</span>
+<span class="n">daily_flow_plot</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">axis_label</span> <span class="o">=</span> <span class="s1">&#39;Flow (m³/s)&#39;</span>
+<span class="n">daily_flow_plot</span><span class="o">.</span><span class="n">legend</span><span class="o">.</span><span class="n">location</span> <span class="o">=</span> <span class="s2">&quot;top_left&quot;</span>
+<span class="n">reg_plot</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">axis_label</span> <span class="o">=</span> <span class="s1">&#39;Regional Flow (m³/s)&#39;</span>
+<span class="n">reg_plot</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">axis_label</span> <span class="o">=</span> <span class="s1">&#39;Project Flow (m³/s)&#39;</span>
+<span class="n">reg_plot</span><span class="o">.</span><span class="n">legend</span><span class="o">.</span><span class="n">location</span> <span class="o">=</span> <span class="s2">&quot;bottom_right&quot;</span>
+
+<span class="n">layout</span> <span class="o">=</span> <span class="n">column</span><span class="p">([</span><span class="n">reg_plot</span><span class="p">,</span> <span class="n">daily_flow_plot</span><span class="p">])</span>
+
+<span class="c1"># show the results</span>
+<span class="n">show</span><span class="p">(</span><span class="n">layout</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./notebooks/Notebook_3"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#characterization-of-long-term-runoff">Characterization of Long-Term Runoff</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-the-data">Import the Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-the-stage-discharge-rating-curve-and-the-best-fit-curve">Plot the Stage-Discharge Rating Curve and the Best Fit Curve</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-daily-average-discharge">Calculate Daily Average Discharge</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-the-rating-curve-and-resultant-flow-series">Plot the Rating Curve and Resultant Flow Series</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cumulative-frequency-the-flow-duration-curve-fdc">Cumulative Frequency: The Flow Duration Curve (FDC)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-regression-of-daily-streamflow">Linear Regression of Daily Streamflow</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chronological-pairing-cp">Chronological Pairing (CP)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#empirical-frequency-pairing">Empirical Frequency Pairing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-up-a-chronological-pairing-regression">Set up a Chronological Pairing Regression</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#obtain-concurrent-data">Obtain Concurrent Data</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regression-plot">Regression Plot</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-long-term-daily-flow-series-for-the-project-location">Create long-term daily flow series for the project location</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compare-the-model-flow-series-to-the-measured-series">Compare the model flow series to the measured series</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#in-the-above-plot-note-general-patterns-specific-exceptions-and-any-trends">In the above plot, note general patterns, specific exceptions, and any trends</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#best-fit">Best-fit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compare-measured-vs-modeled-flow-duration-curves">Compare measured vs. modeled flow duration curves</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estimate-the-long-term-mean-annual-flow-for-our-project-location">Estimate the Long-Term Mean Annual Flow for our Project Location</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#questions-for-reflection">Questions for Reflection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dan Kovacek and Steven Weijs
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

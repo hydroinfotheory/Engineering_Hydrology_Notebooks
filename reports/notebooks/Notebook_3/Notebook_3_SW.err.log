@@ -1,0 +1,52 @@
+Traceback (most recent call last):
+  File "/home/steven/anaconda3/lib/python3.8/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/home/steven/anaconda3/lib/python3.8/site-packages/nbclient/client.py", line 1305, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/home/steven/anaconda3/lib/python3.8/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+  File "/home/steven/anaconda3/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
+    return future.result()
+  File "/home/steven/anaconda3/lib/python3.8/site-packages/nbclient/client.py", line 705, in async_execute
+    await self.async_execute_cell(
+  File "/home/steven/anaconda3/lib/python3.8/site-packages/nbclient/client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/home/steven/anaconda3/lib/python3.8/site-packages/nbclient/client.py", line 914, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# find the best fit equation
+slope, intercept, rval, pval, stderr = st.linregress(concurrent_df['Value'], concurrent_df['RC Q (cms)'])
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mValueError[0m                                Traceback (most recent call last)
+Cell [0;32mIn[25], line 2[0m
+[1;32m      1[0m [38;5;66;03m# find the best fit equation[39;00m
+[0;32m----> 2[0m slope, intercept, rval, pval, stderr [38;5;241m=[39m [43mst[49m[38;5;241;43m.[39;49m[43mlinregress[49m[43m([49m[43mconcurrent_df[49m[43m[[49m[38;5;124;43m'[39;49m[38;5;124;43mValue[39;49m[38;5;124;43m'[39;49m[43m][49m[43m,[49m[43m [49m[43mconcurrent_df[49m[43m[[49m[38;5;124;43m'[39;49m[38;5;124;43mRC Q (cms)[39;49m[38;5;124;43m'[39;49m[43m][49m[43m)[49m
+
+File [0;32m~/anaconda3/lib/python3.8/site-packages/scipy/stats/_stats_mstats_common.py:167[0m, in [0;36mlinregress[0;34m(x, y, alternative)[0m
+[1;32m    162[0m ymean [38;5;241m=[39m np[38;5;241m.[39mmean(y, [38;5;28;01mNone[39;00m)
+[1;32m    164[0m [38;5;66;03m# Average sums of square differences from the mean[39;00m
+[1;32m    165[0m [38;5;66;03m#   ssxm = mean( (x-mean(x))^2 )[39;00m
+[1;32m    166[0m [38;5;66;03m#   ssxym = mean( (x-mean(x)) * (y-mean(y)) )[39;00m
+[0;32m--> 167[0m ssxm, ssxym, _, ssym [38;5;241m=[39m [43mnp[49m[38;5;241;43m.[39;49m[43mcov[49m[43m([49m[43mx[49m[43m,[49m[43m [49m[43my[49m[43m,[49m[43m [49m[43mbias[49m[38;5;241;43m=[39;49m[38;5;241;43m1[39;49m[43m)[49m[38;5;241m.[39mflat
+[1;32m    169[0m [38;5;66;03m# R-value[39;00m
+[1;32m    170[0m [38;5;66;03m#   r = ssxym / sqrt( ssxm * ssym )[39;00m
+[1;32m    171[0m [38;5;28;01mif[39;00m ssxm [38;5;241m==[39m [38;5;241m0.0[39m [38;5;129;01mor[39;00m ssym [38;5;241m==[39m [38;5;241m0.0[39m:
+[1;32m    172[0m     [38;5;66;03m# If the denominator was going to be 0[39;00m
+
+File [0;32m<__array_function__ internals>:200[0m, in [0;36mcov[0;34m(*args, **kwargs)[0m
+
+File [0;32m~/anaconda3/lib/python3.8/site-packages/numpy/lib/function_base.py:2640[0m, in [0;36mcov[0;34m(m, y, rowvar, bias, ddof, fweights, aweights, dtype)[0m
+[1;32m   2638[0m     [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m rowvar [38;5;129;01mand[39;00m y[38;5;241m.[39mshape[[38;5;241m0[39m] [38;5;241m!=[39m [38;5;241m1[39m:
+[1;32m   2639[0m         y [38;5;241m=[39m y[38;5;241m.[39mT
+[0;32m-> 2640[0m     X [38;5;241m=[39m [43mnp[49m[38;5;241;43m.[39;49m[43mconcatenate[49m[43m([49m[43m([49m[43mX[49m[43m,[49m[43m [49m[43my[49m[43m)[49m[43m,[49m[43m [49m[43maxis[49m[38;5;241;43m=[39;49m[38;5;241;43m0[39;49m[43m)[49m
+[1;32m   2642[0m [38;5;28;01mif[39;00m ddof [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m:
+[1;32m   2643[0m     [38;5;28;01mif[39;00m bias [38;5;241m==[39m [38;5;241m0[39m:
+
+File [0;32m<__array_function__ internals>:200[0m, in [0;36mconcatenate[0;34m(*args, **kwargs)[0m
+
+[0;31mValueError[0m: all the input array dimensions except for the concatenation axis must match exactly, but along dimension 1, the array at index 0 has size 2 and the array at index 1 has size 590
+
